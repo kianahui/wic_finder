@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript">
+      $(window).load(function(){
+        $("[data-toggle]").click(function() {
+          var toggle_el = $(this).data("toggle");
+          $(toggle_el).toggleClass("open-sidebar");
+        });
+         $(".swipe-area").swipe({
+              swipeStatus:function(event, phase, direction, distance, duration, fingers)
+                  {
+                      if (phase=="move" && direction =="right") {
+                           $(".container").addClass("open-sidebar");
+                           return false;
+                      }
+                      if (phase=="move" && direction =="left") {
+                           $(".container").removeClass("open-sidebar");
+                           return false;
+                      }
+                  }
+          }); 
+      });
+      
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div id="sidebar">
+            <ul>
+                <li><img src="http://www.sourcetech.com/uploads/cms/image/wic_logo.jpg"/>
+                    <li><a href="#">Find a clinic</a></li>
+                    <li><a href="#">Find a WIC Stores</a></li>
+                    <li><a href="#">Find a WIC Farmer's msarket</a></li>
+                    <li><a href="#">See Food List</a></li>
+                    <li><a href="#">Find a recipe</a></li>
+                </ul>
+            </div>
+            <div class="main-content">
+                <a href="#" data-toggle=".container" id="sidebar-toggle">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </a> 
+                <div class="content">
+                    <h1>OMG It's a WIC website</h1>
+                    <p>Our description and directions and what not go here </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+    </html>
