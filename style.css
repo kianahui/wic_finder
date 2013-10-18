@@ -24,7 +24,7 @@ body, html {
     position: absolute;
     width: 50px;
     left: 0;
-top: 0;
+    top: 0;
     height: 100%;
     background: #f3f3f3;
     z-index: 0;
@@ -74,8 +74,8 @@ top: 0;
 .main-content .content{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-padding-left: 60px;
-width: 100%;
+    padding-left: 60px;
+    width: 100%;
 }
 .main-content .content h1{
     font-weight: 100;
@@ -93,7 +93,7 @@ width: 100%;
     float: left;
 }
 .main-content #sidebar-toggle .bar{
-     display: block;
+    display: block;
     width: 18px;
     margin-bottom: 3px;
     height: 2px;
