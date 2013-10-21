@@ -8,7 +8,7 @@
                 <li><a href="#">Find a WIC Stores</a></li>
                 <li><a href="#">Find a WIC Farmer's market</a></li>
                 <li><a href="#">See Food List</a></li>
-                <li><a href="#">Find a recipe</a></li>
+                <li><a href="recipe.php">Find a recipe</a></li>
              </ul>
         </div>
         <div class="main-content">
