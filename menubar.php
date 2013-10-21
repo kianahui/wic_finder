@@ -17,6 +17,5 @@
                 <span class="bar"></span>
                 <span class="bar"></span>
             </a> 
-      	 </div>
     </body>
 </html>
