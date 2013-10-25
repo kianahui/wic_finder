@@ -3,7 +3,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="style.css"/>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
-    <script type="text/javascript" src="jquery.touchSwipe.min.js"></script>
+    <script type="text/javascript" src="jquery.touchSwipe.js"></script>
     <script type="text/javascript">
       $(window).load(function(){
         $("[data-toggle]").click(function() {
@@ -42,3 +42,4 @@
     </div><!--This extra div closes an open div from the menubar.php and must be included after the content class -->
 </body>
 </html>
+
