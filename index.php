@@ -29,29 +29,16 @@
 </head>
 <body>
     <div class="container">
-        <div id="sidebar">
-            <ul>
-                <li><img src="http://www.sourcetech.com/uploads/cms/image/wic_logo.jpg"/>
-                    <li><a href="#">Find a clinic</a></li>
-                    <li><a href="#">Find a WIC Stores</a></li>
-                    <li><a href="#">Find a WIC Farmer's market</a></li>
-                    <li><a href="#">See Food List</a></li>
-                    <li><a href="#">Find a recipe</a></li>
-                </ul>
-            </div>
-            <div class="main-content">
-                <a href="#" data-toggle=".container" id="sidebar-toggle">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                </a> 
-                <div class="content">
-                    <img src = "http://www.fns.usda.gov/sites/default/files/wic---250_0.png" />
-                    <h1>Welcome to the WIC Locator</h1>
-                    <p>Use the sidebar. </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    </body>
-    </html>
+       <?php
+        include'menubar.php';
+       ?>
+       <div class="content">
+          <img src = "http://www.fns.usda.gov/sites/default/files/wic---250_0.png" />
+          <h1>WIC Central</h1>
+          <p>Welcome! The National WIC Association runs this website and works with WIC agencies to give you the 
+          most up to date info in one spot. You can trust this website because we are the WIC community.</p>  
+       </div>
+       </div>
+    </div><!--This extra div closes an open div from the menubar.php and must be included after the content class -->
+</body>
+</html>
