@@ -103,3 +103,26 @@ body, html {
 .main-content #sidebar-toggle .bar:last-child{
      margin-bottom: 0;   
 }
+
+select {
+width: 240px;
+   height: 34px;
+   overflow: hidden;
+   border: 1px solid #ccc;
+   font-size: 14px;
+}
+
+input[type=submit] {
+    width: 100px;
+    float: left;
+    color:white;
+    font-size:70%;
+    padding:10px;
+    background-color:gray;
+    border-bottom:2px solid black;
+    cursor:pointer;
+}
+input[type=submit]:hover {
+    background-color:black;
+}
+
