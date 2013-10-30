@@ -1,6 +1,13 @@
 <?php
 // doLookup.php: maps State in $_GET['state'] to agencies
 
+// Prevent caching.
+header('Cache-Control: no-cache, must-revalidate');
+header('Expires: Mon, 01 Jan 1996 00:00:00 GMT');
+
+// The JSON standard MIME header.
+header('Content-type: application/json');
+
 $State = $_GET['state'];
 $con = mysqli_connect("localhost", "root");
 mysqli_select_db($con, "mydb");
@@ -23,11 +30,7 @@ while ($row=mysqli_fetch_array($result)) {
 
 echo "</select>";
 
+json_encode($Agency);
+
 mysqli_close($con);
-
-
-// if (isset($post_offices[$_GET['zip']])
-//     echo "Post office: ", $post_offices[$_GET['zip']];
-// else
-//     echo "Sorry, invalid zip code.";
 ?>
