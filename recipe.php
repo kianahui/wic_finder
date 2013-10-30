@@ -34,7 +34,9 @@ iframe-->
 	   <div class="content">
 		   <h1> Find a recipe to match your ingredients using yummly.com </h1>
 		   <p> Enter your ingredients into the serach bar below and push enter.</p>
-		   <iframe src="http://www.yummly.com" width =900; height=700;> </iframe>
+		   <div height=750>
+       <iframe src="http://www.yummly.com" width =900; height=700;> </iframe>
+       </div>
      </div>
 	   </div>
    </div><!--This extra div closes an open div from the menubar.php and must be included after the content class -->
