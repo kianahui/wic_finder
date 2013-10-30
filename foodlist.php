@@ -6,7 +6,6 @@
 	<link rel="stylesheet" type="text/css" href="style.css"/>
 	<script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
 	<script type="text/javascript" src="jquery.touchSwipe.js"></script>
-
 	<script type="text/javascript">
 	$(window).load(function(){
 		$("[data-toggle]").click(function() {
@@ -92,30 +91,40 @@ function getAgency(ev) {
 	}
 }
 
-var url2 = "getList.php?agency="; // URL for server-side PHP script
-function getList(ev) {
-	ev = (ev) ? ev : ((window.event) ? window.event : null);
-	if (ev) {
-		var el = (ev.target) ? ev.target : ((ev.srcElement) ? ev.srcElement : null);
-		if (el) {
-			if (el.selectedIndex > 0) {
-				httpObj.open("GET", url2 + el.options[el.selectedIndex].value, true);
-				httpObj.onreadystatechange = getHttpResponse;
-				httpObj.send(null);
-			}
-		}
-	}
-}
 
-</script>
-<h1> See Food List </h1>
+function getList() {  
+var agency = $.getJson("/doLookup.php");
+var xhr;  
+ if (window.XMLHttpRequest) { // Mozilla, Safari, ...  
+    xhr = new XMLHttpRequest();  
+} else if (window.ActiveXObject) { // IE 8 and older  
+    xhr = new ActiveXObject("Microsoft.XMLHTTP");  
+}  
+     xhr.open("POST", "getList.php", true);   
+     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                    
+     xhr.send(agency);  
+xhr.onreadystatechange = display_data;  
+    function display_data() {  
+     if (xhr.readyState == 4) {  
+      if (xhr.status == 200) {  
+       document.getElementById("link").innerHTML = xhr.responseText;  
+      } else {  
+        alert('The food list should link below.');  
+      }  
+     }  
+  }  
+}  
+
+
+	</script>
 </head>
 
 <body>
 	<div class="container">
 		<?php include'menubar.php'; ?>
 		<div class="content">
-			<form id="agencyFinder">
+			<h1> See Food List </h1>
+			<form id="stateSelector">
 				<select name="state" id ="stateDropdown" onchange="getAgency(event)">
 					<option value="">Please select your state</option>
 
@@ -140,14 +149,14 @@ function getList(ev) {
 				</select>
 				<br>
 
+ <br>
+				<div id="agency">
+					<!--Agency dropdown goes here-->
+				</div>
+				<input type ="submit" value ="Get Food List!" onclick = "getList()"></input>
 			</form>
-			<div id="agency">
-				<span></span>
-			</div>
-
-
-			<br>
-			<input type ="submit" value ="Get Food List!" onclick = "getList(event)"></input>
+			<div id="link"></div>
+				<!--Link goes here-->
 		</div>
 	</div>
 </div> <!--Extra div to close open div from menubar.php-->
