@@ -92,31 +92,31 @@ function getAgency(ev) {
 }
 
 
-function getList() {  
-var agency = $.getJson("/doLookup.php");
-var xhr;  
- if (window.XMLHttpRequest) { // Mozilla, Safari, ...  
-    xhr = new XMLHttpRequest();  
-} else if (window.ActiveXObject) { // IE 8 and older  
-    xhr = new ActiveXObject("Microsoft.XMLHTTP");  
-}  
-     xhr.open("POST", "getList.php", true);   
-     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                    
-     xhr.send(agency);  
-xhr.onreadystatechange = display_data;  
-    function display_data() {  
-     if (xhr.readyState == 4) {  
-      if (xhr.status == 200) {  
-       document.getElementById("link").innerHTML = xhr.responseText;  
-      } else {  
-        alert('The food list should link below.');  
-      }  
-     }  
-  }  
-}  
+// function getList() {  
+// var agency = $("#agencydropdown").val();
+// var xhr;  
+//  if (window.XMLHttpRequest) { // Mozilla, Safari, ...  
+//     xhr = new XMLHttpRequest();  
+// } else if (window.ActiveXObject) { // IE 8 and older  
+//     xhr = new ActiveXObject("Microsoft.XMLHTTP");  
+// }  
+//      xhr.open("POST", "getList.php", true);   
+//      xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");                    
+//      xhr.send(agency);  
+// xhr.onreadystatechange = display_data;  
+//     function display_data() {  
+//      if (xhr.readyState == 4) {  
+//       if (xhr.status == 200) {  
+//        document.getElementById("link").innerHTML = xhr.responseText;  
+//       } else {  
+//         alert('NO YOU CANT RIGHT NOW.');  
+//       }  
+//      }  
+//   }  
+// }  
 
 
-	</script>
+</script>
 </head>
 
 <body>
@@ -124,7 +124,7 @@ xhr.onreadystatechange = display_data;
 		<?php include'menubar.php'; ?>
 		<div class="content">
 			<h1> See Food List </h1>
-			<form id="stateSelector">
+			<form id="stateSelector" method = 'POST'>
 				<select name="state" id ="stateDropdown" onchange="getAgency(event)">
 					<option value="">Please select your state</option>
 
@@ -149,14 +149,39 @@ xhr.onreadystatechange = display_data;
 				</select>
 				<br>
 
- <br>
+				<br>
 				<div id="agency">
 					<!--Agency dropdown goes here-->
 				</div>
-				<input type ="submit" value ="Get Food List!" onclick = "getList()"></input>
+				<input type ="submit" name ="submit" value ="Get Food List!" onclick = "getList()"></input>
 			</form>
+			<br>
 			<div id="link"></div>
-				<!--Link goes here-->
+			<!--Link goes here-->
+			<?php 
+			if(isset($_POST['submit'])) {
+				$Agency = $_POST['agency'];
+				$con = mysqli_connect("localhost", "root");
+				mysqli_select_db($con, "mydb");
+
+				$sql = "SELECT Link FROM foodList WHERE Agency = '".$Agency."';";
+
+				$result=mysqli_query($con, $sql); 
+
+				echo "<br><br><p>";
+
+				while($row = mysqli_fetch_array($result)) {
+					$Link=$row["Link"]; 
+					if ($Link != "") {
+						echo "<a href = \"$Link\" target=\"_blank\">" . $Agency . "</a>";
+					} else {
+						echo "No known food list yet. Don't worry. We're working on it!";
+					}
+				}
+
+				mysqli_close($con);
+			}
+			?>
 		</div>
 	</div>
 </div> <!--Extra div to close open div from menubar.php-->
