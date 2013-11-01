@@ -2,7 +2,7 @@
 <div id="sidebar">
     <ul>
         <li><a href= "index.php"><img src = "WIC_logo_white.png" width = "150px"/></a></li>
-        <li><a href="#">Find a clinic</a></li>
+        <li><a href="location.php">Find a clinic</a></li>
         <li><a href="foodlist.php">See Food List</a></li>
         <li><a href="recipe.php">Find a recipe</a></li>
      </ul>
