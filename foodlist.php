@@ -1,76 +1,69 @@
-<!Doctype HTML>
-<html>
-
-<head>
-	<link rel="stylesheet" type="text/css" href="style.css"/>
-	<SCRIPT language=JavaScript>
-	function displayList () {
-		//
-	}
-
-	function reload(form){
-		var val=$State; 
-		self.location='foodList.php?agency=' + val ;
-	}
-	</script>
+<?php
+include_once('header.php');
+?>
+<div class="content">
 	<h1> See Food List </h1>
-</head>
+	<form id="stateSelector" method = 'POST'>
+		<select name="state" id ="stateDropdown" onchange="getAgency(event)">
+			<option value="">Please select your state</option>
 
-<body>
-	<form method=post name=f1 action=''>
-		<div>
-			<select name="state" id ="statedropdown" onchange=\"reload(this.form)\">
-				<option value="">Please select your state</option>
+			<? 
+			$con = mysqli_connect("localhost", "root");
+			mysqli_select_db($con, "mydb");
 
-				<? 
-				$con = mysqli_connect("localhost", "root");
-				mysqli_select_db($con, "mydb");
+			$sql="SELECT DISTINCT State FROM foodList"; 
+			$result=mysqli_query($con, $sql); 
 
-				$sql="SELECT DISTINCT State FROM foodList"; 
-				$result=mysqli_query($con, $sql); 
+			$options=""; 
 
-				$options=""; 
+			while ($row=mysqli_fetch_array($result)) { 
 
-				while ($row=mysqli_fetch_array($result)) { 
-
-					$State=$row["State"]; 
-					if ($State !="") {
-						$option="<OPTION VALUE=\"$State\">$State</option>";
-						echo $option;
-					}
-				} 
-				?>
-			</select>
-		</div>
+				$State=$row["State"]; 
+				if ($State !="") {
+					$option="<OPTION VALUE=\"$State\">$State</option>";
+					echo $option;
+				}
+			} 
+			?>
+		</select>
 		<br>
-		<div>
 
-			<select name="agency" id ="agencydropdown">
-				<option value="">Please select your agency</option>
-
-				<? 
-				$con = mysqli_connect("localhost", "root");
-				mysqli_select_db($con, "mydb");
-
-				$sql="SELECT Agency FROM foodList WHERE State = $State"; 
-				$result=mysqli_query($con, $sql); 
-
-				$options=""; 
-
-				while ($row=mysqli_fetch_array($result)) { 
-
-					$Agency=$row["Agency"]; 
-					if ($Agency !="") {
-						$option="<OPTION VALUE=\"$Agency\">$Agency</option>";
-						echo $option;
-					}
-				} 
-				?>
-			</select>
-				
-		</form>
-	</div>
+		<br>
+		<div id="agency">
+			<!--Agency dropdown goes here-->
+		</div>
+		<input type ="submit" name ="submit" value ="Get Food List!" onclick = "getList()"></input>
+	</form>
 	<br>
-	<input type ="submit" value ="Get Food List!" onclick="displayList();"></input>
-</body>
-</html>
+	<div id="link"></div>
+	<!--Link goes here-->
+	<?php 
+	if(isset($_POST['submit'])) {
+		$Agency = $_POST['agency'];
+		$con = mysqli_connect("localhost", "root");
+		mysqli_select_db($con, "mydb");
+
+		$sql = "SELECT Link FROM foodList WHERE Agency = '".$Agency."';";
+
+		$result=mysqli_query($con, $sql); 
+
+		echo "<br><br><p>";
+
+		while($row = mysqli_fetch_array($result)) {
+			$Link=$row["Link"]; 
+			if ($Link != "") {
+				echo "<a href = \"$Link\" target=\"_blank\">" . $Agency . "</a>";
+			} else {
+				echo "No known food list yet. Don't worry. We're working on it!";
+			}
+		}
+
+		mysqli_close($con);
+	}
+	?>
+</div>
+
+
+<?php
+include_once('footer.php');
+?>
