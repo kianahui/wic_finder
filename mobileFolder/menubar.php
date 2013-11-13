@@ -1,7 +1,7 @@
 <!--This code is for the menu bar on the right that will display the logo and the 5 user options-->
 <div id="sidebar">
     <ul>
-        <li><a href= "index.php"><img src = "WIC_logo_white.png" width = "150px"/></a></li>
+        <li><a href= "index.php"><img src="http://i.imgur.com/0kdbIIK.png" width = "150px" title="Hosted by imgur.com" /></a></li>
         <li><a href="location.php">Find a clinic</a></li>
         <li><a href="foodlist.php">See Food List</a></li>
      </ul>
