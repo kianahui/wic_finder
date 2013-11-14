@@ -144,7 +144,7 @@
             </tr>
           </table>
 
-          <div style="width: 100%; height: 500px;" id="map-canvas"></div>
+          <div style="width: 100%; height: 90%;" id="map-canvas"></div> <!--I changed this height -->
           <div id="closest-clinics"></div>
        </div>
 	   </div>
