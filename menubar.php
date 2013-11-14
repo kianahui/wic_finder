@@ -4,8 +4,8 @@
         <li><a href= "index.php"><img src = "WIC_logo_white.png" width = "150px"/></a></li>
         <li><a href="location.php">Find a clinic</a></li>
         <li><a href="foodlist.php">See Food List</a></li>
-        <li><a href="#">Nutrition</a></li>
-        <li><a href="#">Breastfeeding</a></li>
+        <li><a href="nutrition.php">Nutrition</a></li>
+        <li><a href="breastfeeding.php">Breastfeeding</a></li>
      </ul>
 </div>
 <div class="main-content">
