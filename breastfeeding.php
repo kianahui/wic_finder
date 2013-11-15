@@ -6,6 +6,8 @@ include_once('header.php');
 	Breastfeeding: Getting Off to a Great Start
 </h1>
 
+<img src="Breastfeeding_page.jpg" alt="">
+
 <ul>
 
 	<li>
