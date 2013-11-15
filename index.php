@@ -1,7 +1,8 @@
 <?php
 include_once('header.php');
 ?>
-<img src="http://www.fns.usda.gov/sites/default/files/wic---250_0.png" alt="">
+<!-- <img src="http://www.fns.usda.gov/sites/default/files/wic---250_0.png" alt=""> -->
+<img src="web_homepage.jpg" alt="">
 <h1>WIC Central</h1>
 <p>
 	WIC safeguards the health of low-income women, infants, and children up to age 5 who are at 
