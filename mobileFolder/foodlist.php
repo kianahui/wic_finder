@@ -3,8 +3,9 @@ include_once('header.php');
 ?>
 <div class="content">
 	<h1> See Food List </h1>
+	<p> Once you select your state, you can access that state's food list.</p>
 	<form id="stateSelector" method = 'POST'>
-		<select name="state" id ="stateDropdown" onchange="getAgency(event)">
+		<select name="state" id ="stateDropdown" onchange="getLink(event)">
 			<option value="">Please select your state</option>
 
 			<? 
@@ -29,37 +30,16 @@ include_once('header.php');
 		<br>
 
 		<br>
-		<div id="agency">
-			<!--Agency dropdown goes here-->
+		<div id="link">
+			<!--Link appears here-->
 		</div>
-		<input type ="submit" name ="submit" value ="Get Food List!" onclick = "getList()"></input>
 	</form>
-	<br>
-	<div id="link"></div>
-	<!--Link goes here-->
-	<?php 
-	if(isset($_POST['submit'])) {
-		$Agency = $_POST['agency'];
-		$con = mysqli_connect("localhost", "root");
-		mysqli_select_db($con, "mydb");
-
-		$sql = "SELECT Link FROM foodList WHERE Agency = '".$Agency."';";
-
-		$result=mysqli_query($con, $sql); 
-
-		echo "<br><br><p>";
-
-		while($row = mysqli_fetch_array($result)) {
-			$Link=$row["Link"]; 
-			if ($Link != "") {
-				echo "<a href = \"$Link\" target=\"_blank\">" . $Agency . "</a>";
-			} else {
-				echo "No known food list yet. Don't worry. We're working on it!";
-			}
-		}
-
-		mysqli_close($con);
-	}
-	?>
 </div>
 
+</div>
+ </div>
+       </div>
+    </div><!--This extra div closes an open div from the menubar.php and must be included after the content class -->
+    
+</body>
+</html>
