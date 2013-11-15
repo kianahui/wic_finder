@@ -25,6 +25,7 @@
    }); 
   });
   </script>
+  
   <script language="javascript" type="text/javascript">
   function makeHttpObject() {
     var xmlHttpObj;
@@ -185,7 +186,7 @@ for ($i=0;$i<$result;$i++)
   
 }
 ?>
-<div class="container">
+<div class="container" id="css-table">
   <?php
   include'menubar.php';
   ?>
