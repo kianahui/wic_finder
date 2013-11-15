@@ -4,12 +4,19 @@ body, html {
     font-family: helvetica;
     font-size: 50px; /*changed to bigger*/
     font-weight: 100;
+    background-color: #f7f7f9;
 }
-h1{
-    font-size: 74px; /*changed to bigger*/
+
+#css-table {
+    display:table;
 }
+
+#css-table .col{
+    display:table-cell;
+}
+
 .container {
-    position: relative;
+    position: absolute;
     height: 100%;
     width: 100%;
     left: 0;
@@ -19,17 +26,15 @@ h1{
     -o-transition:  left 0.4s ease-in-out;
     transition:  left 0.4s ease-in-out;
 }
-.container.content #location{
- width:300px; /*LOCATION STUFF NOT WORKING*/ 
-}
 
-.container.content td {
-    font-size:24px; /* LOCATION STUFF NOT WORKING */
+.container.content.submissionBox { 
+    width: 300px; height: 150px;  /*NOT WORKING*/
+}
+.container.content label {
+    font-size:20px; 
 }
 .container.open-sidebar {
-    
     left: 80%; /*changed -- must match width of sidebar */
-    /*position:fixed; /*is this how I fix the weirdness?*/
 }
  
 .swipe-area {
@@ -46,8 +51,9 @@ h1{
 white-space:nowrap;
 }
 #sidebar {
-    background: black;
+    background: #1e2451;
     position: absolute;
+    clear: both;
     width: 80%;/*changed -- must match left*/
     height: 100%;
     left: -80%;/*changed -- must match width*/
@@ -78,12 +84,11 @@ white-space:nowrap;
     transition:  background 0.3s ease-in-out;
 }
 #sidebar ul li:hover a {
-    background: #3f3f3f;
-
+    background: #e56a69;
 }
 
 select {
-width: 240px;
+    width: 240px;
    height: 34px;
    overflow: hidden;
    border: 1px solid #ccc;
@@ -105,7 +110,7 @@ input[type=submit]:hover {
 }
 
 #sidebar #picture{
-    width:100%;
+    width:30%;
     margin-left: auto;
     margin-right: auto;
 
@@ -114,7 +119,7 @@ input[type=submit]:hover {
 .main-content {
     width: 100%;
     height: 100%;
-    padding: 50px;
+    padding: 40px;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     position: relative;
@@ -122,17 +127,18 @@ input[type=submit]:hover {
 .main-content .content{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    padding-left: 105px;
+    /*padding-left: 105px;*/
     width: 100%;
     text-align: center; 
 }
-.main-content .content h1{
+/*.main-content .content h1{   CAUSING WEIRD MENU BUG
     font-weight: 100;
 }
+
 .main-content .content p{
     width: 100%;
     line-height: 160%;
-}
+}*/
 .main-content #sidebar-toggle {
     background: #484848;
     border-radius: 3px;
@@ -142,6 +148,8 @@ input[type=submit]:hover {
     float: left;
     height: 80px;
     width: 80px;
+    margin-right:20px;
+    margin-bottom:20px;
 }
 .main-content #sidebar-toggle .bar{
     display: block;
@@ -157,7 +165,7 @@ input[type=submit]:hover {
 }
 .container.open-sidebar #footer {
     color: gray;
-    background-color: black;
+    background-color: #1e2451;
     text-align: left;
     width:100%;
     box-sizing: border-box;
@@ -167,3 +175,26 @@ input[type=submit]:hover {
     padding-left: 7px;
     
 }
+h2 {
+    color: #e56a69 ;
+}
+
+h1 {
+    color: #0e1235;
+    font-size: 74px; /*changed to bigger*/
+}
+
+a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #2c3261;
+}
+
+a:hover {
+    border-bottom: 2px solid #e56a69;
+}
+
+a:visited {
+    color: #2c3261;
+}
+
