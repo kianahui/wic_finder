@@ -32,9 +32,9 @@
             $options_state = array(0 => "all");
             foreach ($options_state as $row)
             {
-              echo $row;
+              echo $row['State'];
               $options_state[$row['State']] = $row['State'];
-              echo $row;
+              echo $row['State'];
             }
             //save the columns names in a array that we will use as filter         
             //$options_lists = array();    
