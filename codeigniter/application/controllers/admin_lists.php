@@ -154,7 +154,7 @@ class Admin_lists extends CI_Controller {
         $this->pagination->initialize($config);   
 
         //load the view
-        $data['main_content'] = 'admin/lists/list';
+        $data['main_content'] = 'admin/products/list';
         $this->load->view('includes/template', $data);  
 
     }//index
