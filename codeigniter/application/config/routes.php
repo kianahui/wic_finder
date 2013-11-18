@@ -41,7 +41,7 @@ $route['default_controller'] = 'user/index';
 $route['404_override'] = '';
 
 /*admin*/
-$route['admin'] = 'codeigniter/index.php/admin';
+$route['admin'] = 'index.php/admin';
 $route['admin/signup'] = 'user/signup';
 $route['admin/create_member'] = 'user/create_member';
 $route['admin/login'] = 'user/index';
