@@ -41,7 +41,7 @@ $route['default_controller'] = 'user/index';
 $route['404_override'] = '';
 
 /*admin*/
-$route['http://54.200.248.73/wic_finder/admin'] = 'codeigniter/index.php/admin';
+$route['admin'] = 'wic_finder/codeigniter/index.php/admin';
 $route['admin/signup'] = 'user/signup';
 $route['admin/create_member'] = 'user/create_member';
 $route['admin/login'] = 'user/index';
