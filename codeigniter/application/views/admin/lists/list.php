@@ -31,7 +31,7 @@
     //        foreach ($options_state as $row)
      //       {
      //         $options_state[$row['State']] = $row['name'];
-            }
+     //       }
             //save the columns names in a array that we will use as filter         
             //$options_lists = array();    
             //foreach ($options_lists as $array) {
