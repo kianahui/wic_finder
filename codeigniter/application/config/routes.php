@@ -41,8 +41,7 @@ $route['default_controller'] = 'user/index';
 $route['404_override'] = '';
 
 /*admin*/
-$route['http://54.200.248.73/admin/testme'] = '';
-$route['admin'] = 'user/index';
+$route['/admin'] = 'user/index';
 $route['admin/signup'] = 'user/signup';
 $route['admin/create_member'] = 'user/create_member';
 $route['admin/login'] = 'user/index';
