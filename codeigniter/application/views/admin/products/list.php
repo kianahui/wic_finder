@@ -33,10 +33,10 @@
               $options_state[$row['state']] = $row['name'];
             }
             //save the columns names in a array that we will use as filter         
-            $options_products = array();    
-            foreach ($products as $array) {
+            $options_lists = array();    
+            foreach ($options_lists as $array) {
               foreach ($array as $key => $value) {
-                $options_products[$key] = $key;
+                $options_lists[$key] = $key;
               }
               break;
             }
@@ -47,13 +47,10 @@
               echo form_input('search_string', $search_string_selected, 'style="width: 170px;
 height: 26px;"');
 
-              echo form_label('Filter by manufacturer:', 'manufacture_id');
-              echo form_dropdown('manufacture_id', $options_manufacture, $manufacture_selected, 'class="span2"');
+              echo form_label('Filter by state:', 'state_name');
+              echo form_dropdown('state_name', $options_lists, $state_selected, 'class="span2"');
 
-              echo form_label('Order by:', 'order');
-              echo form_dropdown('order', $options_products, $order, 'class="span2"');
-
-              $data_submit = array('name' => 'mysubmit', 'class' => 'btn btn-primary', 'value' => 'Go');
+              $data_submit = array('State' => 'mysubmit', 'class' => 'btn btn-primary', 'value' => 'Go');
 
               $options_order_type = array('Asc' => 'Asc', 'Desc' => 'Desc');
               echo form_dropdown('order_type', $options_order_type, $order_type_selected, 'class="span1"');
