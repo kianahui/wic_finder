@@ -10,7 +10,7 @@ class User extends CI_Controller {
 	function index()
 	{
 		if($this->session->userdata('is_logged_in')){
-			redirect('admin/products');
+			redirect('admin/lists');
         }else{
         	$this->load->view('admin/login');	
         }

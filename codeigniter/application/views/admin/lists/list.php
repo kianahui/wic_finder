@@ -15,6 +15,7 @@
       <div class="page-header users-header">
         <h2>
           <?php echo ucfirst($this->uri->segment(2));?> 
+          <br>
           <a  href="<?php echo site_url("admin").'/'.$this->uri->segment(2); ?>/add" class="btn btn-success">Add New State Food List</a>
         </h2>
       </div>
