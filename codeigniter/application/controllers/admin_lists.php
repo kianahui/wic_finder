@@ -6,7 +6,7 @@ class Admin_products extends CI_Controller {
     * @return void
     */
     public function __construct()
-    {list
+    {
         parent::__construct();
         $this->load->model('lists_model');
 
@@ -30,7 +30,7 @@ class Admin_products extends CI_Controller {
 
         //pagination settings
         $config['per_page'] = 5;
-        $config['base_url'] = base_url().'admin/lists';
+        $config['base_url'] = base_url().'admin/products';
         $config['use_page_numbers'] = TRUE;
         $config['num_links'] = 20;
         $config['full_tag_open'] = '<ul>';
