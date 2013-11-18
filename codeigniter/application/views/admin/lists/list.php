@@ -30,10 +30,11 @@
             $attributes = array('class' => 'form-inline reset-margin', 'State' => 'myform');
            
             $options_state = array(0 => "all");
-            echo $options_state;
             foreach ($options_state as $row)
             {
+              echo $row;
               $options_state[$row['State']] = $row['State'];
+              echo $row;
             }
             //save the columns names in a array that we will use as filter         
             //$options_lists = array();    
