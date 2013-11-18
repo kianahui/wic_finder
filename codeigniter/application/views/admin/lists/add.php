@@ -46,7 +46,7 @@
       //form data
       $attributes = array('class' => 'form-horizontal', 'State' => '');
       $options_lists = array('' => "Select");
-      foreach ($lists as $row)
+      foreach ($options_lists as $row)
       {
         $options_lists[$row['State']] = $row['State'];
       }
