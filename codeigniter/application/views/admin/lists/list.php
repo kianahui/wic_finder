@@ -16,6 +16,7 @@
         <h2>
           <?php echo ucfirst($this->uri->segment(2));?> 
           <br>
+          <br>
           <a  href="<?php echo site_url("admin").'/'.$this->uri->segment(2); ?>/add" class="btn btn-success">Add New State Food List</a>
         </h2>
       </div>
@@ -29,6 +30,7 @@
             $attributes = array('class' => 'form-inline reset-margin', 'State' => 'myform');
            
             $options_state = array(0 => "all");
+            echo $options_state
             foreach ($options_state as $row)
             {
               $options_state[$row['State']] = $row['State'];
