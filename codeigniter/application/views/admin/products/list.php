@@ -66,25 +66,17 @@ height: 26px;"');
             <thead>
               <tr>
                 <th class="header">#</th>
-                <th class="yellow header headerSortDown">Description</th>
-                <th class="green header">Stock</th>
-                <th class="red header">Cost Price</th>
-                <th class="red header">Sell Price</th>
-                <th class="red header">Manufacture</th>
-                <th class="red header">Actions</th>
+                <th class="green header">State</th>
+                <th class="Link">Cost Price</th>
               </tr>
             </thead>
             <tbody>
               <?php
-              foreach($products as $row)
+              foreach($options_lists as $row)
               {
                 echo '<tr>';
-                echo '<td>'.$row['id'].'</td>';
-                echo '<td>'.$row['description'].'</td>';
-                echo '<td>'.$row['stock'].'</td>';
-                echo '<td>'.$row['cost_price'].'</td>';
-                echo '<td>'.$row['sell_price'].'</td>';
-                echo '<td>'.$row['manufacture_name'].'</td>';
+                echo '<td>'.$row['State'].'</td>';
+                echo '<td>'.$row['Link'].'</td>';
                 echo '<td class="crud-actions">
                   <a href="'.site_url("admin").'/products/update/'.$row['id'].'" class="btn btn-info">view & edit</a>  
                   <a href="'.site_url("admin").'/products/delete/'.$row['id'].'" class="btn btn-danger">delete</a>
