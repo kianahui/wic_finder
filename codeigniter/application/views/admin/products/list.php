@@ -30,16 +30,16 @@
             $options_state = array(0 => "all");
             foreach ($options_state as $row)
             {
-              $options_state[$row['state']] = $row['name'];
+              $options_state[$row['State']] = $row['name'];
             }
             //save the columns names in a array that we will use as filter         
-            $options_lists = array();    
-            foreach ($options_lists as $array) {
-              foreach ($array as $key => $value) {
-                $options_lists[$key] = $key;
-              }
-              break;
-            }
+            //$options_lists = array();    
+            //foreach ($options_lists as $array) {
+              //foreach ($array as $key => $value) {
+               // $options_lists[$key] = $key;
+             // }
+              //break;
+            //}
 
             echo form_open('admin/products', $attributes);
      
@@ -47,7 +47,7 @@
               echo form_input('search_string', $search_string_selected, 'style="width: 170px;
 height: 26px;"');
 
-              echo form_label('Filter by state:', 'state_name');
+              echo form_label('Filter by State:', 'state_name');
               echo form_dropdown('state_name', $options_lists, $state_selected, 'class="span2"');
 
               $data_submit = array('State' => 'mysubmit', 'class' => 'btn btn-primary', 'value' => 'Go');
@@ -78,8 +78,8 @@ height: 26px;"');
                 echo '<td>'.$row['State'].'</td>';
                 echo '<td>'.$row['Link'].'</td>';
                 echo '<td class="crud-actions">
-                  <a href="'.site_url("admin").'/products/update/'.$row['id'].'" class="btn btn-info">view & edit</a>  
-                  <a href="'.site_url("admin").'/products/delete/'.$row['id'].'" class="btn btn-danger">delete</a>
+                  <a href="'.site_url("admin").'/products/update/'.$row['State'].'" class="btn btn-info">view & edit</a>  
+                  <a href="'.site_url("admin").'/products/delete/'.$row['State'].'" class="btn btn-danger">delete</a>
                 </td>';
                 echo '</tr>';
               }
