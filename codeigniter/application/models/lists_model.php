@@ -1,5 +1,5 @@
 <?php
-class FoodList_model extends CI_Model {
+class Lists_model extends CI_Model {
  
     /**
     * Responsable for auto load the database
