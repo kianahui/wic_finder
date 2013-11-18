@@ -6,7 +6,7 @@ class Admin_products extends CI_Controller {
     * @return void
     */
     public function __construct()
-    {
+    {list
         parent::__construct();
         $this->load->model('lists_model');
 
