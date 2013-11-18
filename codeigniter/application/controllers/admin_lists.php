@@ -1,5 +1,5 @@
 <?php
-class Admin_products extends CI_Controller {
+class Admin_lists extends CI_Controller {
  
     /**
     * Responsable for auto load the model
