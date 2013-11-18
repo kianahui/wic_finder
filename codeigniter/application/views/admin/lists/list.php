@@ -30,7 +30,7 @@
             $attributes = array('class' => 'form-inline reset-margin', 'State' => 'myform');
            
             $options_state = array(0 => "all");
-            echo $options_state
+            echo $options_state;
             foreach ($options_state as $row)
             {
               $options_state[$row['State']] = $row['State'];
