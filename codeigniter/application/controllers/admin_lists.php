@@ -5,7 +5,7 @@ class Admin_products extends CI_Controller {
     * Responsable for auto load the model
     * @return void
     */
-    public function __construct();
+    public function __construct()
     {list
         parent::__construct();
         $this->load->model('lists_model');
