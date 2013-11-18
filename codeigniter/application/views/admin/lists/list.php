@@ -15,7 +15,7 @@
       <div class="page-header users-header">
         <h2>
           <?php echo ucfirst($this->uri->segment(2));?> 
-          <a  href="<?php echo site_url("admin").'/'.$this->uri->segment(2); ?>/add" class="btn btn-success">Add a new</a>
+          <a  href="<?php echo site_url("admin").'/'.$this->uri->segment(2); ?>/add" class="btn btn-success">Add New State Food List</a>
         </h2>
       </div>
       
@@ -28,9 +28,9 @@
             $attributes = array('class' => 'form-inline reset-margin', 'State' => 'myform');
            
             $options_state = array(0 => "all");
-            foreach ($options_state as $row)
-            {
-              $options_state[$row['State']] = $row['name'];
+    //        foreach ($options_state as $row)
+     //       {
+     //         $options_state[$row['State']] = $row['name'];
             }
             //save the columns names in a array that we will use as filter         
             //$options_lists = array();    
@@ -65,7 +65,6 @@ height: 26px;"');
           <table class="table table-striped table-bordered table-condensed">
             <thead>
               <tr>
-                <th class="header">#</th>
                 <th class="green header">State</th>
                 <th class="Link">Link</th>
               </tr>
