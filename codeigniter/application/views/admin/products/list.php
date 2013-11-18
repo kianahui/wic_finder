@@ -25,12 +25,12 @@
            
             <?php
            
-            $attributes = array('class' => 'form-inline reset-margin', 'id' => 'myform');
+            $attributes = array('class' => 'form-inline reset-margin', 'State' => 'myform');
            
-            $options_manufacture = array(0 => "all");
-            foreach ($manufactures as $row)
+            $options_states = array(0 => "all");
+            foreach ($state as $row)
             {
-              $options_manufacture[$row['id']] = $row['name'];
+              $options_states[$row['state']] = $row['name'];
             }
             //save the columns names in a array that we will use as filter         
             $options_products = array();    

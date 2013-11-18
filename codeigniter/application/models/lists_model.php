@@ -87,7 +87,7 @@ class Lists_model extends CI_Model {
     * @param array $data - associative array with data to store
     * @return boolean 
     */
-    function store_manufacture($data)
+    function store_list($data)
     {
 		$insert = $this->db->insert('foodList', $data);
 	    return $insert;
@@ -117,7 +117,7 @@ class Lists_model extends CI_Model {
     * @param int $id - manufacture id
     * @return boolean
     */
-	function delete_manufacture($state){
+	function delete_list($state){
 		$this->db->where('State', $state);
 		$this->db->delete('foodList'); 
 	}
