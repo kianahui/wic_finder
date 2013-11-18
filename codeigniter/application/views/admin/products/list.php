@@ -67,12 +67,12 @@ height: 26px;"');
               <tr>
                 <th class="header">#</th>
                 <th class="green header">State</th>
-                <th class="Link">Cost Price</th>
+                <th class="Link">Link</th>
               </tr>
             </thead>
             <tbody>
               <?php
-              foreach($options_lists as $row)
+              foreach($options_state as $row)
               {
                 echo '<tr>';
                 echo '<td>'.$row['State'].'</td>';
