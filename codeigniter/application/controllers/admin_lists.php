@@ -108,7 +108,7 @@ class Admin_lists extends CI_Controller {
             $this->session->set_userdata($filter_session_data);
 
             //fetch manufacturers data into arrays
-            $data['manufactures'] = $this->manufacturers_model->get_manufacturers();
+            $data['foodLists'] = $this->lists_model->get_foodLists();
 
             $data['count_lists']= $this->lists_model->count_lists($state, $search_string, $order);
             $config['total_rows'] = $data['count_lists'];
@@ -140,7 +140,7 @@ class Admin_lists extends CI_Controller {
             //pre selected options
             $data['search_string_selected'] = '';
             $data['state_selected'] = 0;
-            $data['order'] = 'id';
+            $data['order'] = 'State';
 
             //fetch sql data into arrays
             $data['foodLists'] = $this->lists_model->get_foodLists();
