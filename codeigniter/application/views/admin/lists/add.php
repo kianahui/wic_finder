@@ -60,14 +60,14 @@
           <div class="control-group">
             <label for="inputError" class="control-label">State</label>
             <div class="controls">
-              <input type="text" id="" name="state" value="<?php echo set_value('state'); ?>" >
+              <input type="text" id="" name="State" value="<?php echo set_value('state'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
           </div>
           <div class="control-group">
             <label for="inputError" class="control-label">Link</label>
             <div class="controls">
-              <input type="text" id="" name="link" value="<?php echo set_value('link'); ?>">
+              <input type="text" id="" name="Link" value="<?php echo set_value('link'); ?>">
               <!--<span class="help-inline">Cost Price</span>-->
             </div>
           </div>          
