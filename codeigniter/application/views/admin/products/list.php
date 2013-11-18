@@ -47,8 +47,8 @@
               echo form_input('search_string', $search_string_selected, 'style="width: 170px;
 height: 26px;"');
 
-              echo form_label('Filter by State:', 'state_name');
-              echo form_dropdown('state_name', $options_lists, $state_selected, 'class="span2"');
+     //         echo form_label('Filter by State:', 'state_name');
+    //          echo form_dropdown('state_name', $options_lists, $state_selected, 'class="span2"');
 
               $data_submit = array('State' => 'mysubmit', 'class' => 'btn btn-primary', 'value' => 'Go');
 
