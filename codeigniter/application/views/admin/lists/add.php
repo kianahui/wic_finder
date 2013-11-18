@@ -58,43 +58,19 @@
       ?>
         <fieldset>
           <div class="control-group">
-            <label for="inputError" class="control-label">Description</label>
+            <label for="inputError" class="control-label">State</label>
             <div class="controls">
-              <input type="text" id="" name="description" value="<?php echo set_value('description'); ?>" >
+              <input type="text" id="" name="state" value="<?php echo set_value('state'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
           </div>
           <div class="control-group">
-            <label for="inputError" class="control-label">Stock</label>
+            <label for="inputError" class="control-label">Link</label>
             <div class="controls">
-              <input type="text" id="" name="stock" value="<?php echo set_value('stock'); ?>">
+              <input type="text" id="" name="link" value="<?php echo set_value('link'); ?>">
               <!--<span class="help-inline">Cost Price</span>-->
             </div>
           </div>          
-          <div class="control-group">
-            <label for="inputError" class="control-label">Cost Price</label>
-            <div class="controls">
-              <input type="text" id="" name="cost_price" value="<?php echo set_value('cost_price'); ?>">
-              <!--<span class="help-inline">Cost Price</span>-->
-            </div>
-          </div>
-          <div class="control-group">
-            <label for="inputError" class="control-label">Sell Price</label>
-            <div class="controls">
-              <input type="text" name="sell_price" value="<?php echo set_value('sell_price'); ?>">
-              <!--<span class="help-inline">OOps</span>-->
-            </div>
-          </div>
-          <?php
-          echo '<div class="control-group">';
-            echo '<label for="list_State" class="control-label">Manufacture</label>';
-            echo '<div class="controls">';
-              //echo form_dropdown('manufacture_id', $options_manufacture, '', 'class="span2"');  
-              echo form_dropdown('list_State', $options_lists, set_value('list_State'), 'class="span2"');
-
-            echo '</div>';
-          echo '</div">';
-          ?>
           <div class="form-actions">
             <button class="btn btn-primary" type="submit">Save changes</button>
             <button class="btn" type="reset">Cancel</button>
