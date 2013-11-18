@@ -44,11 +44,11 @@
       
       <?php
       //form data
-      $attributes = array('class' => 'form-horizontal', 'id' => '');
-      $options_manufacture = array('' => "Select");
-      foreach ($manufactures as $row)
+      $attributes = array('class' => 'form-horizontal', 'State' => '');
+      $options_lists = array('' => "Select");
+      foreach ($lists as $row)
       {
-        $options_manufacture[$row['id']] = $row['name'];
+        $options_lists[$row['State']] = $row['State'];
       }
 
       //form validation
@@ -87,11 +87,10 @@
           </div>
           <?php
           echo '<div class="control-group">';
-            echo '<label for="manufacture_id" class="control-label">Manufacture</label>';
+            echo '<label for="list_State" class="control-label">Manufacture</label>';
             echo '<div class="controls">';
-              //echo form_dropdown('manufacture_id', $options_manufacture, '', 'class="span2"');
-              
-              echo form_dropdown('manufacture_id', $options_manufacture, set_value('manufacture_id'), 'class="span2"');
+              //echo form_dropdown('manufacture_id', $options_manufacture, '', 'class="span2"');  
+              echo form_dropdown('list_State', $options_lists, set_value('list_State'), 'class="span2"');
 
             echo '</div>';
           echo '</div">';
