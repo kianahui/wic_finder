@@ -55,7 +55,7 @@
       //form validation
       echo validation_errors();
 
-      echo form_open('admin/products/update/'.$this->uri->segment(4).'', $attributes);
+      echo form_open('admin/lists/update/'.$this->uri->segment(4).'', $attributes);
       ?>
         <fieldset>
           <div class="control-group">

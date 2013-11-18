@@ -54,7 +54,7 @@
       //form validation
       echo validation_errors();
       
-      echo form_open('admin/products/add', $attributes);
+      echo form_open('admin/lists/add', $attributes);
       ?>
         <fieldset>
           <div class="control-group">

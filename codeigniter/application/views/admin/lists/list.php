@@ -41,7 +41,7 @@
               //break;
             //}
 
-            echo form_open('admin/products', $attributes);
+            echo form_open('admin/lists', $attributes);
      
               echo form_label('Search:', 'search_string');
               echo form_input('search_string', $search_string_selected, 'style="width: 170px;
@@ -78,8 +78,8 @@ height: 26px;"');
                 echo '<td>'.$row['State'].'</td>';
                 echo '<td>'.$row['Link'].'</td>';
                 echo '<td class="crud-actions">
-                  <a href="'.site_url("admin").'/products/update/'.$row['State'].'" class="btn btn-info">view & edit</a>  
-                  <a href="'.site_url("admin").'/products/delete/'.$row['State'].'" class="btn btn-danger">delete</a>
+                  <a href="'.site_url("admin").'/lists/update/'.$row['State'].'" class="btn btn-info">view & edit</a>  
+                  <a href="'.site_url("admin").'/lists/delete/'.$row['State'].'" class="btn btn-danger">delete</a>
                 </td>';
                 echo '</tr>';
               }

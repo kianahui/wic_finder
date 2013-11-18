@@ -30,7 +30,7 @@ class Admin_lists extends CI_Controller {
 
         //pagination settings
         $config['per_page'] = 5;
-        $config['base_url'] = base_url().'admin/products';
+        $config['base_url'] = base_url().'admin/lists';
         $config['use_page_numbers'] = TRUE;
         $config['num_links'] = 20;
         $config['full_tag_open'] = '<ul>';
@@ -154,7 +154,7 @@ class Admin_lists extends CI_Controller {
         $this->pagination->initialize($config);   
 
         //load the view
-        $data['main_content'] = 'admin/products/list';
+        $data['main_content'] = 'admin/lists/list';
         $this->load->view('includes/template', $data);  
 
     }//index
