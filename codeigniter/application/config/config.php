@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://localhost:8888/CodeIgniter-admin-panel';
+$config['base_url']	= 'http://http://54.200.248.73/wic_finder/';
 
 /*
 |--------------------------------------------------------------------------
