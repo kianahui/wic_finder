@@ -47,8 +47,6 @@ class Lists_model extends CI_Model {
 
 		if($order){
 			$this->db->order_by($order, $order_type);
-		}else{
-		    $this->db->order_by('id', $order_type);
 		}
 
         if($limit_start && $limit_end){
@@ -79,8 +77,6 @@ class Lists_model extends CI_Model {
 		}
 		if($order){
 			$this->db->order_by($order, 'Asc');
-		}else{
-		    $this->db->order_by('id', 'Asc');
 		}
 		$query = $this->db->get();
 		return $query->num_rows();        
