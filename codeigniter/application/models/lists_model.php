@@ -71,7 +71,7 @@ class Lists_model extends CI_Model {
     function count_lists($search_string=null, $order=null)
     {
 		$this->db->select('*');
-		$this->db->from('lists');
+		$this->db->from('foodList');
 		if($search_string){
 			$this->db->like('State', $search_string);
 		}
