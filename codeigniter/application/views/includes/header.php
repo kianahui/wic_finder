@@ -9,7 +9,7 @@
 	<div class="navbar navbar-fixed-top">
 	  <div class="navbar-inner">
 	    <div class="container">
-	      <a class="brand">Project Name</a>
+	      <a class="brand">Wic Finder Admin</a>
 	      <ul class="nav">
 	        <li <?php if($this->uri->segment(2) == 'lists'){echo 'class="active"';}?>>
 	          <a href="<?php echo base_url(); ?>admin/lists">Food Lists</a>
