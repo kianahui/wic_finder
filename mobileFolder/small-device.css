@@ -1,10 +1,13 @@
 body, html {
     height: 100%;
     margin: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
     font-family: helvetica;
-    font-size: 50px; /*changed to bigger*/
     font-weight: 100;
-    background-color: #f7f7f9;
+    font-size: 50px; /*changed to bigger*/
+    background-color: #f7f7f9; /*added */
+     -webkit-overflow-scrolling:touch; /*added*/
 }
 
 #css-table {
@@ -16,7 +19,7 @@ body, html {
 }
 
 .container {
-    position: absolute;
+    position: relative;
     height: 100%;
     width: 100%;
     left: 0;
@@ -27,14 +30,12 @@ body, html {
     transition:  left 0.4s ease-in-out;
 }
 
-.container.content.submissionBox { 
-    width: 300px; height: 150px;  /*NOT WORKING*/
-}
 .container.content label {
     font-size:20px; 
 }
+
 .container.open-sidebar {
-    left: 80%; /*changed -- must match width of sidebar */
+    left: 80%; /*made %*/
 }
  
 .swipe-area {
@@ -46,17 +47,18 @@ body, html {
     background: #f3f3f3;
     z-index: 0;
 }
+
 .content.p
 {
 white-space:nowrap;
 }
+
 #sidebar {
     background: #1e2451;
     position: absolute;
-    clear: both;
-    width: 80%;/*changed -- must match left*/
+    width: 80%; /*made percent */
     height: 100%;
-    left: -80%;/*changed -- must match width*/
+    left: -80%; /* made percent*/
     box-sizing: border-box;
     -moz-box-sizing: border-box;
 }
@@ -70,8 +72,8 @@ white-space:nowrap;
     margin: 0;
 }
 #sidebar ul li a {
-    padding: 45px 25px;
-    font-size: 60px; /*changed to bigger*/
+    padding: 45px 25px; /*made larger */
+    font-size: 60px; /*made larger*/
     font-weight: 100;
     color: white;
     text-decoration: none;
@@ -109,17 +111,11 @@ input[type=submit]:hover {
     background-color:black;
 }
 
-#sidebar #picture{
-    width:30%;
-    margin-left: auto;
-    margin-right: auto;
 
-
-}
 .main-content {
     width: 100%;
     height: 100%;
-    padding: 40px;
+    padding: 40px; /*made larger */
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     position: relative;
@@ -127,18 +123,17 @@ input[type=submit]:hover {
 .main-content .content{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
-    /*padding-left: 105px;*/
+    padding-left: 60px;
     width: 100%;
-    text-align: center; 
+    text-align: center;  /* added*/
 }
-/*.main-content .content h1{   CAUSING WEIRD MENU BUG
+.main-content .content h1{
     font-weight: 100;
 }
-
 .main-content .content p{
     width: 100%;
     line-height: 160%;
-}*/
+}
 .main-content #sidebar-toggle {
     background: #484848;
     border-radius: 3px;
@@ -149,20 +144,28 @@ input[type=submit]:hover {
     height: 80px;
     width: 80px;
     margin-right:20px;
-    margin-bottom:20px;
+    margin-bottom:20px; /*added heights and margin*/
 }
 .main-content #sidebar-toggle .bar{
     display: block;
-    width: 77px; /*changed to bigger*/
-    margin-bottom: 25px;
-    margin-top: 10px;
-    height: 4px;
+    width: 76px; /*made bigger*/
+    margin-bottom: 25px; /*made bigger*/
+    margin-top: 10px; /*added*/
+    height: 5px; /*made bigger*/
     background-color: #fff;
-    border-radius: 3px;  
+    border-radius: 3px; /*made bigger*/   
 }
 .main-content #sidebar-toggle .bar:last-child{
      margin-bottom: 0;   
 }
+
+#sidebar .picture {   
+    content: url("http://i.imgur.com/6USTNLM.png") 0 0 no-repeat;
+    text-indent: -9999px;
+    width:90%;
+    height:200px;
+}
+
 .container.open-sidebar #footer {
     color: gray;
     background-color: #1e2451;
