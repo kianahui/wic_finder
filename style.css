@@ -56,15 +56,12 @@ body, html {
 }
 #sidebar ul li:hover a {
     background: #e56a69;
-<<<<<<< HEAD
 }
 
 #social {
     width: 200px;
     padding-left: 15px;
 
-=======
->>>>>>> f67c7c026bb80befcc6cd43ec9d280a58b585cf5
 }
 
 select {
@@ -98,7 +95,6 @@ input[type=submit]:hover {
 
 #footer {
     color: gray;
-<<<<<<< HEAD
     float: right;
     padding-right: 7px;
     font-size: 12px;
@@ -132,33 +128,4 @@ a:visited {
 img.displayed {
     display: block;
     text-align: center;
-=======
-    text-align: right;
-    float: right;
-    box-sizing: border-box;
-    padding-right: 7px;
-    font-size: 12px;
-}
-
-h2 {
-    color: #e56a69 ;
-}
-
-h1 {
-    color: #0e1235;
-}
-
-a {
-    text-decoration: none;
-    font-weight: bold;
-    color: #2c3261;
-}
-
-a:hover {
-    border-bottom: 2px solid #e56a69;
-}
-
-a:visited {
-    color: #2c3261;
->>>>>>> f67c7c026bb80befcc6cd43ec9d280a58b585cf5
 }
