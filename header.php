@@ -1,8 +1,10 @@
 <!DOCTYPE HTML>
 <head>
   <link rel="stylesheet" type="text/css" href="style.css"/>
+
   <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script type="text/javascript" src="jquery.touchSwipe.js"></script>
+
   <script type="text/javascript">
   $(window).load(function(){
     $("[data-toggle]").click(function() {
@@ -23,6 +25,8 @@
      }
    }); 
   });
+  </script>
+  
   <script language="javascript" type="text/javascript">
   function makeHttpObject() {
     var xmlHttpObj;
@@ -59,9 +63,9 @@ function getHttpResponse() {
   if (httpObj.readyState == 4) {
     if (httpObj.status == 200) {
       content = httpObj.responseText;
-      div = document.getElementById("agency");
+      div = document.getElementById("link");
       div.innerHTML = "";
-            // insert HTML content into "agency" <div>
+            // insert HTML content into "link" <div>
             div.innerHTML = content;
           } else {
             alert("There was a problem with the response" + httpObj.statusText);
@@ -70,7 +74,7 @@ function getHttpResponse() {
       }
 
 var url = "doLookup.php?state="; // URL for server-side PHP script
-function getAgency(ev) {
+function getLink(ev) {
   ev = (ev) ? ev : ((window.event) ? window.event : null);
   if (ev) {
     var el = (ev.target) ? ev.target : ((ev.srcElement) ? ev.srcElement : null);
@@ -100,7 +104,7 @@ compliments of http://www.buchfelder.biz/
 =====================================================
 */
 
-$mobile = "localhost/wic_finder-mobile/";
+$mobile = "localhost/wic_finder/mobileFolder";
 $text = $_SERVER['HTTP_USER_AGENT'];
 $var[0] = 'Mozilla/4.';
 $var[1] = 'Mozilla/3.0';
@@ -183,7 +187,7 @@ for ($i=0;$i<$result;$i++)
   
 }
 ?>
-<div class="container">
+<div class="container" id="css-table">
   <?php
   include'menubar.php';
   ?>
