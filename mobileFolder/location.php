@@ -1,6 +1,7 @@
 <html>
 <head>
     <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="small-device.css" />
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
     <script type="text/javascript" src="jquery.touchSwipe.js"></script>
 
@@ -130,24 +131,19 @@
     </script>
 </head>
 <body>
-	   <div class="container">
-	     <?php include'menubar.php'; ?>
-  	   <div class="content">
-          <table style="width: 100%;">
-            <tr>
-              <td style="text-align: center; vertical-align: middle;">
-                <div id="header">
-                  <label for="location">Enter location:</label>
-                  <input type="text" id="location" class="form-control" placeholder="address" onkeypress="return userEnteredLocation(event);">
-                </div>
-              </td>
-            </tr>
-          </table>
+     <div class="container">
+       <?php include'menubar.php'; ?>
+       <div class="content">
+          <div id="header">
+            <label for="locationBox">Enter location:</label>
+            <div class="submissionBox"><input type="text" id="locationBox" class="form-control" placeholder="address" onkeypress="return userEnteredLocation(event);"></div>
+          </div>
 
-          <div style="width: 100%; height: 500px;" id="map-canvas"></div>
+          <div style="width: 100%; height: 90%;" id="map-canvas"></div>
           <div id="closest-clinics"></div>
        </div>
-	   </div>
+     </div>
    </div><!--This extra div closes an open div from the menubar.php and must be included after the content class -->
 </body>
 </html>
+

@@ -1,6 +1,12 @@
 		</div>
 
 	<div id="footer">
+<<<<<<< HEAD
+=======
+	<!-- 	<div class="social">
+		<a href="http://www.facebook.com/nationalwicassociation" target="_blank"><img src ="recycle.png"/></a>
+	</div> -->
+>>>>>>> f67c7c026bb80befcc6cd43ec9d280a58b585cf5
 	<p>
 		&copy; 2013 National WIC Association
 	</p>

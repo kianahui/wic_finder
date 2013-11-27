@@ -6,12 +6,15 @@ include_once('header.php');
 	Nutrition and Healthy Eating Tips
 </h1>
 
+<<<<<<< HEAD
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
 		<td align="center" valign="middle"><img src="images/nutrition_page.jpg" width="700" height="200"/></td>
 	</tr>
 </table>
 
+=======
+>>>>>>> f67c7c026bb80befcc6cd43ec9d280a58b585cf5
 <h2>
 	Selecting Whole Grain Foods
 </h2>
@@ -42,4 +45,8 @@ include_once('header.php');
 
 <?php
 include_once('footer.php');
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> f67c7c026bb80befcc6cd43ec9d280a58b585cf5
