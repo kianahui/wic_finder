@@ -111,7 +111,7 @@
         var formattedAddress = address.replace(' ', '+;')
         $.get('https://maps.googleapis.com/maps/api/geocode/json?address='+formattedAddress+'&sensor=false', function(data) {
           var position = data["results"][0]["geometry"]["location"];
-          console.log('Lat/Lng from string:')
+          console.log('Lat/Lng from string:');
           console.log(String(position['lat']) + ',' + String(position['lng']));
         });
       }
@@ -147,9 +147,8 @@
 
 
           function queryDatabase(lat, lng, state) {
-            system.out('asdf');
             $.get('nearClinics.php?lat='+lat+'&lng='+lng+'&state='+state+'&candNum=10', function (clinics) {
-
+              console.log('asdf');
               clinics = JSON.parse(clinics);
               //addMarker(data[i]['Latitude'], data[i]['Longitude'], data[i]['Agency']);
               getDistancesToClinics(lat, lng, clinics);
