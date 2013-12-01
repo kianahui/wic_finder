@@ -147,7 +147,7 @@
 
 
           function queryDatabase(lat, lng, state) {
-
+            system.out('asdf');
             $.get('nearClinics.php?lat='+lat+'&lng='+lng+'&state='+state+'&candNum=10', function (clinics) {
 
               clinics = JSON.parse(clinics);
