@@ -16,6 +16,7 @@
         <h2>
           <?php echo ucfirst($this->uri->segment(2));?> 
           <br>
+          <br>
           <a  href="<?php echo site_url("admin").'/'.$this->uri->segment(2); ?>/add" class="btn btn-success">Add New State Food List</a>
         </h2>
       </div>
@@ -31,7 +32,9 @@
             $options_state = array(0 => "all");
             foreach ($options_state as $row)
             {
+              echo $row['State'];
               $options_state[$row['State']] = $row['State'];
+              echo $row['State'];
             }
             //save the columns names in a array that we will use as filter         
             //$options_lists = array();    
