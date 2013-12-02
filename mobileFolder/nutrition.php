@@ -6,6 +6,12 @@ include_once('header2.php');
 	Nutrition and Healthy Eating Tips
 </h1>
 
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="center" valign="middle"><img src="images/nutrition_page.jpg" width="700" height="200"/></td>
+	</tr>
+</table>
+
 <h2>
 	Selecting Whole Grain Foods
 </h2>
@@ -13,6 +19,7 @@ include_once('header2.php');
 	than any other ingredient.</p>
 
 	<h2>Here are a few ways to eat more fruits and vegetables every day!</h2>
+
 	<ul>
 
 		<li>Keep cut up fruits and vegetables ready for a quick salad.</li>
@@ -34,8 +41,6 @@ include_once('header2.php');
 
 	</ul>
 
-</div>
-</div><!--This extra div closes an open div from the menubar.php and must be included after the content class -->
-
-</body>
-</html>
+<?php
+include_once('footer.php');
+?>
