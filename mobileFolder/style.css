@@ -6,17 +6,16 @@ body, html {
     background-color: #f7f7f9;
 }
 
-
 #css-table {
-    display:table;
+    display: table;
 }
 
-#css-table .col{
-    display:table-cell;
+#css-table .col {
+    display: table-cell;
 }
 
 .container {
-    position: relative;
+    position: absolute;
     height: 100%;
     width: 100%;
 }
@@ -26,9 +25,12 @@ body, html {
     position: absolute;
     clear: both;
     width: 200px;
+    float: left;
     height: 100%;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
+    top: 0;
+    bottom: 0;
 }
 #sidebar ul {
     margin: 0;
@@ -54,6 +56,12 @@ body, html {
 }
 #sidebar ul li:hover a {
     background: #e56a69;
+}
+
+#social {
+    width: 200px;
+    padding-left: 15px;
+
 }
 
 select {
@@ -87,13 +95,12 @@ input[type=submit]:hover {
 
 #footer {
     color: gray;
-    text-align: right;
     float: right;
-    box-sizing: border-box;
-    position: relative;
     padding-right: 7px;
     font-size: 12px;
-    padding-top: -200px;
+    background: transparent;
+    margin-top: -19px;
+    position: relative;
 }
 
 h2 {
@@ -118,4 +125,8 @@ a:visited {
     color: #2c3261;
 }
 
+img.displayed {
+    display: block;
+    text-align: center;
+}
 
