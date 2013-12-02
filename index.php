@@ -21,7 +21,7 @@ include_once('header.php');
 
 <table width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tr>
-		<td align="center" valign="middle"><img src="web_homepage.jpg" width="700" height="200"/></td>
+		<td align="center" valign="middle"><img src="web_homepage-1.jpg" width="700" height="200"/></td>
 	</tr>
 </table>
 
