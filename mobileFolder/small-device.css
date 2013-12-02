@@ -2,7 +2,6 @@ body, html {
     height: 100%;
     margin: 0;
     overflow-y: auto;
-    overflow-x: hidden;
     font-family: helvetica;
     font-weight: 100;
     font-size: 50px; /*changed to bigger*/
@@ -89,6 +88,13 @@ white-space:nowrap;
     background: #e56a69;
 }
 
+.socialpics{
+    width: 75px;
+}
+
+#footer{
+    font-size: 20px;
+}
 select {
     width: 240px;
    height: 34px;
@@ -200,4 +206,5 @@ a:hover {
 a:visited {
     color: #2c3261;
 }
+
 
