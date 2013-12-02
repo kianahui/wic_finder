@@ -31,12 +31,20 @@ body, html {
 
 .container.content label {
     font-size:20px; 
+
 }
+
 
 .container.open-sidebar {
     left: 80%; /*made %*/
+    position:fixed;
+
 }
  
+ .container.open-sidebar #footer{
+    visibility: hidden;
+ }
+
 .swipe-area {
     position: absolute;
     width: 50px;
@@ -92,9 +100,23 @@ white-space:nowrap;
     width: 75px;
 }
 
-#footer{
-    font-size: 20px;
+#social {
+    width: 80%;
+    padding-left: 15px;
+
 }
+
+#footer {
+    color: gray;
+    float: right;
+    padding-right: 7px;
+    font-size: 24px;
+    background: transparent;
+    margin-top: -19px;
+    position: relative;
+}
+
+
 select {
     width: 240px;
    height: 34px;
@@ -205,6 +227,12 @@ a:hover {
 
 a:visited {
     color: #2c3261;
+}
+
+
+img.displayed {
+    display: block;
+    text-align: center;
 }
 
 
