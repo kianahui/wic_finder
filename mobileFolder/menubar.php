@@ -1,24 +1,18 @@
 <!--This code is for the menu bar on the right that will display the logo and the 5 user options-->
 <div id="sidebar">
     <ul>
-        <li><a href= "index.php"><img src="http://i.imgur.com/0kdbIIK.png" width = "150px" title="Hosted by imgur.com" class="picture"/></a></li>
-        <li><a href="location.php">Find a clinic</a></li>
+        <li><a href= "index.php"><img src = "http://i.imgur.com/0kdbIIK.png" width = "150px" class="picture"/></a></li>
+        <li><a href="location.php">Find a Clinic</a></li>
         <li><a href="foodlist.php">See Food List</a></li>
         <li><a href="nutrition.php">Nutrition</a></li>
         <li><a href="breastfeeding.php">Breastfeeding</a></li>
      </ul>
-     <div id="footer"> <p>
-    <div class="social">
-    <a href="http://www.facebook.com/nationalwicassociation" target="_blank"><img src ="recycle.png"/></a>
+     <br>
+    <div id="social">
+        <a href="http://www.facebook.com/nationalwicassociation" target="_blank"><img src ="images/Facebook.png"/ width = "25px" class="socialpics"></a>
+        <a href="https://twitter.com/NatWICAssoc" target="_blank"><img src ="images/Twitter.png"/ width = "25px" class="socialpics"></a>
+        <a href="http://www.pinterest.com/natwicassoc/" target="_blank"><img src ="images/Pinterest.png"/ width = "25px" class="socialpics"></a>
     </div>
-    
-    &copy; 2013 National WIC Association<br>
-    2001 S Street, NW Suite 580<br>
-    Washington, DC 20009<br>
-    Voice: 202.232.5492<br>
-    Fax: 202.387.5281
-</p>
-</div>
 </div>
 <div class="main-content">
 	<a href="#" data-toggle=".container" id="sidebar-toggle">
