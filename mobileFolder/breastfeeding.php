@@ -5,6 +5,11 @@ include_once('header2.php');
 <h1>
 	Breastfeeding: Getting Off to a Great Start
 </h1>
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+	<tr>
+		<td align="center" valign="middle"><img src="images/Breastfeeding_page.jpg" width="700" height="200"/></td>
+	</tr>
+</table>
 
 <ul>
 
@@ -64,9 +69,6 @@ include_once('header2.php');
 </ul>
 
 
-
-</div>
-</div><!--This extra div closes an open div from the menubar.php and must be included after the content class -->
-
-</body>
-</html>
+<?php
+include_once('footer.php');
+?>
