@@ -48,12 +48,12 @@ $route['admin/login'] = 'user/index';
 $route['admin/logout'] = 'user/logout';
 $route['admin/login/validate_credentials'] = 'user/validate_credentials';
 
-$route['admin/lists'] = 'admin_lists/index';
-$route['admin/lists/add'] = 'admin_lists/add';
-$route['admin/lists/update'] = 'admin_lists/update';
-$route['admin/lists/update/(:any)'] = 'admin_lists/update/$1';
-$route['admin/lists/delete/(:any)'] = 'admin_lists/delete/$1';
-$route['admin/lists/(:any)'] = 'admin_lists/index/$1'; //$1 = page number
+$route['admin/products'] = 'admin_products/index';
+$route['admin/products/add'] = 'admin_products/add';
+$route['admin/products/update'] = 'admin_products/update';
+$route['admin/products/update/(:any)'] = 'admin_products/update/$1';
+$route['admin/products/delete/(:any)'] = 'admin_products/delete/$1';
+$route['admin/products/(:any)'] = 'admin_products/index/$1'; //$1 = page number
 
 $route['admin/manufacturers'] = 'admin_manufacturers/index';
 $route['admin/manufacturers/add'] = 'admin_manufacturers/add';

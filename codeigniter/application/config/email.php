@@ -4,8 +4,8 @@
 $config['protocol'] = 'smtp';
 $config['smtp_host'] = 'ssl://smtp.googlemail.com';
 $config['smtp_port'] = 465;
-$config['smtp_user'] = 'wic.finder@gmail.com';
-$config['smtp_pass'] = 'iheartwic';
+$config['smtp_user'] = 'nettutsTutorials@gmail.com';
+$config['smtp_pass'] = 'nettuts-tutorials';
 */
 
 $config['protocol'] = 'sendmail';
