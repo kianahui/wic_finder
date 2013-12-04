@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'http://54.200.248.73/wic_finder/codeigniter/index.php/';
+$config['base_url']	= 'http://54.200.248.73/wic_finder/codeigniter/';
 
 /*
 |--------------------------------------------------------------------------
