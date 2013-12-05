@@ -172,7 +172,8 @@ class Admin_manufacturers extends CI_Controller {
             if ($this->form_validation->run())
             {
                 $data_to_store = array(
-                    'name' => $this->input->post('name'),
+                    'State' => $this->input->post('State'),
+                    'Link' => $this->input->post('Link'),
                 );
                 //if the insert has returned true then we show the flash message
                 if($this->manufacturers_model->store_manufacture($data_to_store)){
