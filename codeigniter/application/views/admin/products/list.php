@@ -15,7 +15,7 @@
       <div class="page-header users-header">
         <h2>
           <?php
-          echo "Clinics"
+          if (1) {echo "Clinics"}
             ;?>
           <a  href="<?php echo site_url("admin").'/'.$this->uri->segment(2); ?>/add" class="btn btn-success">Add a new</a>
         </h2>
