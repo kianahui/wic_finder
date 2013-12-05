@@ -24,8 +24,8 @@
       <div class="page-header">
         <h2>
           Adding <?php
-          if ($this->uri->segment(2) == 'products') {echo 'Clinics';}
-          else {echo "Food Lists";}
+          if ($this->uri->segment(2) == 'products') {echo 'Clinic';}
+          else {echo "Food List";}
             ?>
         </h2>
       </div>
