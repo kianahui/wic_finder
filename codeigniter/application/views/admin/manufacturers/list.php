@@ -66,7 +66,7 @@
             <thead>
               <tr>
                 <th class="header">#</th>
-                <th class="yellow header headerSortDown">Name</th>
+                <th class="yellow header headerSortDown">State</th>
               </tr>
             </thead>
             <tbody>

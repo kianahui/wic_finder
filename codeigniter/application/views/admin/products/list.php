@@ -34,11 +34,6 @@
            
             $attributes = array('class' => 'form-inline reset-margin', 'id' => 'myform');
            
-            $options_manufacture = array(0 => "all");
-            foreach ($manufactures as $row)
-            {
-              $options_manufacture[$row['id']] = $row['name'];
-            }
             //save the columns names in a array that we will use as filter         
             $options_products = array();    
             foreach ($products as $array) {
@@ -53,9 +48,6 @@
               echo form_label('Search:', 'search_string');
               echo form_input('search_string', $search_string_selected, 'style="width: 170px;
 height: 26px;"');
-
-              echo form_label('Filter by manufacturer:', 'manufacture_id');
-              echo form_dropdown('manufacture_id', $options_manufacture, $manufacture_selected, 'class="span2"');
 
               echo form_label('Order by:', 'order');
               echo form_dropdown('order', $options_products, $order, 'class="span2"');
@@ -76,12 +68,15 @@ height: 26px;"');
             <thead>
               <tr>
                 <th class="header">#</th>
-                <th class="yellow header headerSortDown">Description</th>
-                <th class="green header">Stock</th>
-                <th class="red header">Cost Price</th>
-                <th class="red header">Sell Price</th>
-                <th class="red header">Manufacture</th>
-                <th class="red header">Actions</th>
+                <th class="yellow header headerSortDown">Agency</th>
+                <th class="red header">Address1</th>
+                <th class="red header">Address2</th>
+                <th class="red header">PO_Box</th>
+                <th class="red header">City</th>
+                <th class="red header">State</th>
+                <th class="red header">Zip_Code</th>
+                <th class="red header">Latitude</th>
+                <th class="red header">Longitude</th>
               </tr>
             </thead>
             <tbody>
@@ -90,11 +85,15 @@ height: 26px;"');
               {
                 echo '<tr>';
                 echo '<td>'.$row['id'].'</td>';
-                echo '<td>'.$row['description'].'</td>';
-                echo '<td>'.$row['stock'].'</td>';
-                echo '<td>'.$row['cost_price'].'</td>';
-                echo '<td>'.$row['sell_price'].'</td>';
-                echo '<td>'.$row['manufacture_name'].'</td>';
+                echo '<td>'.$row['Agency'].'</td>';
+                echo '<td>'.$row['Address1'].'</td>';
+                echo '<td>'.$row['Address2'].'</td>';
+                echo '<td>'.$row['PO_Box'].'</td>';
+                echo '<td>'.$row['City'].'</td>';
+                echo '<td>'.$row['State'].'</td>';
+                echo '<td>'.$row['Zip_Code'].'</td>';
+                echo '<td>'.$row['Latitude'].'</td>';
+                echo '<td>'.$row['Longitude'].'</td>';
                 echo '<td class="crud-actions">
                   <a href="'.site_url("admin").'/products/update/'.$row['id'].'" class="btn btn-info">view & edit</a>  
                   <a href="'.site_url("admin").'/products/delete/'.$row['id'].'" class="btn btn-danger">delete</a>

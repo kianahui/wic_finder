@@ -18,7 +18,7 @@ class Products_model extends CI_Model {
     public function get_product_by_id($id)
     {
 		$this->db->select('*');
-		$this->db->from('products');
+		$this->db->from('californiaClinics');
 		$this->db->where('id', $id);
 		$query = $this->db->get();
 		return $query->result_array(); 
@@ -38,24 +38,13 @@ class Products_model extends CI_Model {
     public function get_products($manufacture_id=null, $search_string=null, $order=null, $order_type='Asc', $limit_start, $limit_end)
     {
 	    
-		$this->db->select('products.id');
-		$this->db->select('products.description');
-		$this->db->select('products.stock');
-		$this->db->select('products.cost_price');
-		$this->db->select('products.sell_price');
-		$this->db->select('products.manufacture_id');
-		$this->db->select('manufacturers.name as manufacture_name');
-		$this->db->from('products');
-		if($manufacture_id != null && $manufacture_id != 0){
-			$this->db->where('manufacture_id', $manufacture_id);
-		}
+		$this->db->select('*');
+		$this->db->from('californiaClinics');
 		if($search_string){
-			$this->db->like('description', $search_string);
+			$this->db->like('Agency', $search_string);
 		}
 
-		$this->db->join('manufacturers', 'products.manufacture_id = manufacturers.id', 'left');
-
-		$this->db->group_by('products.id');
+		$this->db->group_by('id');
 
 		if($order){
 			$this->db->order_by($order, $order_type);
@@ -63,10 +52,8 @@ class Products_model extends CI_Model {
 		    $this->db->order_by('id', $order_type);
 		}
 
-
 		$this->db->limit($limit_start, $limit_end);
 		//$this->db->limit('4', '4');
-
 
 		$query = $this->db->get();
 		
@@ -83,12 +70,12 @@ class Products_model extends CI_Model {
     function count_products($manufacture_id=null, $search_string=null, $order=null)
     {
 		$this->db->select('*');
-		$this->db->from('products');
+		$this->db->from('californiaClinics');
 		if($manufacture_id != null && $manufacture_id != 0){
 			$this->db->where('manufacture_id', $manufacture_id);
 		}
 		if($search_string){
-			$this->db->like('description', $search_string);
+			$this->db->like('Agency', $search_string);
 		}
 		if($order){
 			$this->db->order_by($order, 'Asc');
@@ -106,7 +93,7 @@ class Products_model extends CI_Model {
     */
     function store_product($data)
     {
-		$insert = $this->db->insert('products', $data);
+		$insert = $this->db->insert('californiaClinics', $data);
 	    return $insert;
 	}
 
@@ -118,7 +105,7 @@ class Products_model extends CI_Model {
     function update_product($id, $data)
     {
 		$this->db->where('id', $id);
-		$this->db->update('products', $data);
+		$this->db->update('californiaClinics', $data);
 		$report = array();
 		$report['error'] = $this->db->_error_number();
 		$report['message'] = $this->db->_error_message();
@@ -136,7 +123,7 @@ class Products_model extends CI_Model {
     */
 	function delete_product($id){
 		$this->db->where('id', $id);
-		$this->db->delete('products'); 
+		$this->db->delete('californiaClinics'); 
 	}
  
 }
