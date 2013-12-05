@@ -10,7 +10,7 @@
         <li class="active">
           <?php echo 
             if($this->uri->segment(2)=='products'){"Clinics"}else{"Food Lists"}
-            );?>
+            ;?>
         </li>
       </ul>
 
@@ -18,7 +18,7 @@
         <h2>
           <?php echo 
             if($this->uri->segment(2)=='products'){"Clinics"}else{"Food Lists"}
-            );?>
+            ;?>
           <a  href="<?php echo site_url("admin").'/'.$this->uri->segment(2); ?>/add" class="btn btn-success">Add a new</a>
         </h2>
       </div>
