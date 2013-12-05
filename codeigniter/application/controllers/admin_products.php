@@ -30,7 +30,7 @@ class Admin_products extends CI_Controller {
         $order_type = $this->input->post('order_type'); 
 
         //pagination settings
-        $config['per_page'] = 5;
+        $config['per_page'] = 10;
         $config['base_url'] = base_url().'admin/products';
         $config['use_page_numbers'] = TRUE;
         $config['num_links'] = 20;
@@ -167,22 +167,29 @@ class Admin_products extends CI_Controller {
         {
 
             //form validation
-            $this->form_validation->set_rules('description', 'description', 'required');
-            $this->form_validation->set_rules('stock', 'stock', 'required|numeric');
-            $this->form_validation->set_rules('cost_price', 'cost_price', 'required|numeric');
-            $this->form_validation->set_rules('sell_price', 'sell_price', 'required|numeric');
-            $this->form_validation->set_rules('manufacture_id', 'manufacture_id', 'required');
+            $this->form_validation->set_rules('Agency', 'Agency', 'required');
+            $this->form_validation->set_rules('Address1', 'Address1', 'required');
+            $this->form_validation->set_rules('City', 'City', 'required');
+            $this->form_validation->set_rules('State', 'State', 'required');
+            $this->form_validation->set_rules('Zip_Code', 'Zip_Code', 'numeric');
+            $this->form_validation->set_rules('Latitude', 'Latitude', 'required|numeric');
+            $this->form_validation->set_rules('Longitude', 'Longitude', 'required|numeric');
             $this->form_validation->set_error_delimiters('<div class="alert alert-error"><a class="close" data-dismiss="alert">×</a><strong>', '</strong></div>');
 
             //if the form has passed through the validation
             if ($this->form_validation->run())
             {
                 $data_to_store = array(
-                    'description' => $this->input->post('description'),
-                    'stock' => $this->input->post('stock'),
-                    'cost_price' => $this->input->post('cost_price'),
-                    'sell_price' => $this->input->post('sell_price'),          
-                    'manufacture_id' => $this->input->post('manufacture_id')
+                    'Agency' => $this->input->post('Agency'),
+                    'Address1' => $this->input->post('Address1'),
+                    'Address2' => $this->input->post('Address2'),
+                    'PO_Box' => $this->input->post('PO_Box'),          
+                    'City' => $this->input->post('City'),
+                    'State' => $this->input->post('State'),
+                    'Zip_Code' => $this->input->post('Zip_Code'),
+                    'Phone' => $this->input->post('Phone'),
+                    'Latitude' => $this->input->post('Latitude'),
+                    'Longitude' => $this->input->post('Longitude')
                 );
                 //if the insert has returned true then we show the flash message
                 if($this->products_model->store_product($data_to_store)){
@@ -194,8 +201,6 @@ class Admin_products extends CI_Controller {
             }
 
         }
-        //fetch manufactures data to populate the select field
-        $data['manufactures'] = $this->manufacturers_model->get_manufacturers();
         //load the view
         $data['main_content'] = 'admin/products/add';
         $this->load->view('includes/template', $data);  
@@ -214,22 +219,27 @@ class Admin_products extends CI_Controller {
         if ($this->input->server('REQUEST_METHOD') === 'POST')
         {
             //form validation
-            $this->form_validation->set_rules('description', 'description', 'required');
-            $this->form_validation->set_rules('stock', 'stock', 'required|numeric');
-            $this->form_validation->set_rules('cost_price', 'cost_price', 'required|numeric');
-            $this->form_validation->set_rules('sell_price', 'sell_price', 'required|numeric');
-            $this->form_validation->set_rules('manufacture_id', 'manufacture_id', 'required');
-            $this->form_validation->set_error_delimiters('<div class="alert alert-error"><a class="close" data-dismiss="alert">×</a><strong>', '</strong></div>');
-            //if the form has passed through the validation
+            $this->form_validation->set_rules('Agency', 'Agency', 'required');
+            $this->form_validation->set_rules('Address1', 'Address1', 'required');
+            $this->form_validation->set_rules('City', 'City', 'required');
+            $this->form_validation->set_rules('State', 'State', 'required');
+            $this->form_validation->set_rules('Zip_Code', 'Zip_Code', 'numeric');
+            $this->form_validation->set_rules('Latitude', 'Latitude', 'required|numeric');
+            $this->form_validation->set_rules('Longitude', 'Longitude', 'required|numeric');            //if the form has passed through the validation
             if ($this->form_validation->run())
             {
     
                 $data_to_store = array(
-                    'description' => $this->input->post('description'),
-                    'stock' => $this->input->post('stock'),
-                    'cost_price' => $this->input->post('cost_price'),
-                    'sell_price' => $this->input->post('sell_price'),          
-                    'manufacture_id' => $this->input->post('manufacture_id')
+                    'Agency' => $this->input->post('Agency'),
+                    'Address1' => $this->input->post('Address1'),
+                    'Address2' => $this->input->post('Address2'),
+                    'PO_Box' => $this->input->post('PO_Box'),          
+                    'City' => $this->input->post('City'),
+                    'State' => $this->input->post('State'),
+                    'Zip_Code' => $this->input->post('Zip_Code'),
+                    'Phone' => $this->input->post('Phone'),
+                    'Latitude' => $this->input->post('Latitude'),
+                    'Longitude' => $this->input->post('Longitude')
                 );
                 //if the insert has returned true then we show the flash message
                 if($this->products_model->update_product($id, $data_to_store) == TRUE){
@@ -248,8 +258,6 @@ class Admin_products extends CI_Controller {
 
         //product data 
         $data['product'] = $this->products_model->get_product_by_id($id);
-        //fetch manufactures data to populate the select field
-        $data['manufactures'] = $this->manufacturers_model->get_manufacturers();
         //load the view
         $data['main_content'] = 'admin/products/edit';
         $this->load->view('includes/template', $data);            

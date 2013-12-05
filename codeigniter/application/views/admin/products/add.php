@@ -64,44 +64,75 @@
       ?>
         <fieldset>
           <div class="control-group">
-            <label for="inputError" class="control-label">Description</label>
+            <label for="inputError" class="control-label">Agency</label>
             <div class="controls">
               <input type="text" id="" name="description" value="<?php echo set_value('description'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
           </div>
           <div class="control-group">
-            <label for="inputError" class="control-label">Stock</label>
+            <label for="inputError" class="control-label">Address1</label>
             <div class="controls">
-              <input type="text" id="" name="stock" value="<?php echo set_value('stock'); ?>">
-              <!--<span class="help-inline">Cost Price</span>-->
+              <input type="text" id="" name="description" value="<?php echo set_value('description'); ?>" >
+              <!--<span class="help-inline">Woohoo!</span>-->
             </div>
-          </div>          
-          <div class="control-group">
-            <label for="inputError" class="control-label">Cost Price</label>
+          </div>  
+             <div class="control-group">
+            <label for="inputError" class="control-label">Address2</label>
             <div class="controls">
-              <input type="text" id="" name="cost_price" value="<?php echo set_value('cost_price'); ?>">
-              <!--<span class="help-inline">Cost Price</span>-->
+              <input type="text" id="" name="description" value="<?php echo set_value('description'); ?>" >
+              <!--<span class="help-inline">Woohoo!</span>-->
+            </div>
+            <div class="control-group">
+            <label for="inputError" class="control-label">PO_Box</label>
+            <div class="controls">
+              <input type="text" id="" name="description" value="<?php echo set_value('description'); ?>" >
+              <!--<span class="help-inline">Woohoo!</span>-->
+            </div>
+            <div class="control-group">
+            <label for="inputError" class="control-label">City</label>
+            <div class="controls">
+              <input type="text" id="" name="description" value="<?php echo set_value('description'); ?>" >
+              <!--<span class="help-inline">Woohoo!</span>-->
+            </div>
+            <div class="control-group">
+            <label for="inputError" class="control-label">State</label>
+            <div class="controls">
+              <input type="text" id="" name="description" value="<?php echo set_value('description'); ?>" >
+              <!--<span class="help-inline">Woohoo!</span>-->
+            <div class="control-group">
+            <label for="inputError" class="control-label">Zip Code</label>
+            <div class="controls">
+              <input type="text" id="" name="description" value="<?php echo set_value('description'); ?>" >
+              <!--<span class="help-inline">Woohoo!</span>-->
+            </div>
+            <div class="control-group">
+            <label for="inputError" class="control-label">Phone Number</label>
+            <div class="controls">
+              <input type="text" id="" name="description" value="<?php echo set_value('description'); ?>" >
+              <!--<span class="help-inline">Woohoo!</span>-->
+            </div>
+            <div class="control-group">
+            <label for="inputError" class="control-label">Latitude</label>
+            <div class="controls">
+              <input type="text" id="" name="description" value="<?php echo set_value('description'); ?>" >
+              <!--<span class="help-inline">Woohoo!</span>-->
+            </div>
+          <div class="control-group">
+            <label for="inputError" class="control-label">Longitude</label>
+            <div class="controls">
+              <input type="text" id="" name="description" value="<?php echo set_value('description'); ?>" >
+              <!--<span class="help-inline">Woohoo!</span>-->
             </div>
           </div>
-          <div class="control-group">
-            <label for="inputError" class="control-label">Sell Price</label>
-            <div class="controls">
-              <input type="text" name="sell_price" value="<?php echo set_value('sell_price'); ?>">
-              <!--<span class="help-inline">OOps</span>-->
+          </div>
+          </div>
+          </div>
             </div>
           </div>
-          <?php
-          echo '<div class="control-group">';
-            echo '<label for="manufacture_id" class="control-label">Manufacture</label>';
-            echo '<div class="controls">';
-              //echo form_dropdown('manufacture_id', $options_manufacture, '', 'class="span2"');
-              
-              echo form_dropdown('manufacture_id', $options_manufacture, set_value('manufacture_id'), 'class="span2"');
-
-            echo '</div>';
-          echo '</div">';
-          ?>
+          </div>
+          </div>
+          </div>       
           <div class="form-actions">
             <button class="btn btn-primary" type="submit">Save changes</button>
             <button class="btn" type="reset">Cancel</button>
