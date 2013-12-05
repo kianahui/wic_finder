@@ -51,11 +51,6 @@
       <?php
       //form data
       $attributes = array('class' => 'form-horizontal', 'id' => '');
-      $options_manufacture = array('' => "Select");
-      foreach ($manufactures as $row)
-      {
-        $options_manufacture[$row['id']] = $row['name'];
-      }
 
       //form validation
       echo validation_errors();
