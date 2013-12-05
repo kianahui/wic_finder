@@ -203,14 +203,16 @@ class Admin_manufacturers extends CI_Controller {
         if ($this->input->server('REQUEST_METHOD') === 'POST')
         {
             //form validation
-            $this->form_validation->set_rules('name', 'name', 'required');
+            $this->form_validation->set_rules('State', 'State', 'required');
+            $this->form_validation->set_rules('Link', 'Link', 'required');
             $this->form_validation->set_error_delimiters('<div class="alert alert-error"><a class="close" data-dismiss="alert">×</a><strong>', '</strong></div>');
             //if the form has passed through the validation
             if ($this->form_validation->run())
             {
     
                 $data_to_store = array(
-                    'name' => $this->input->post('name'),
+                    'State' => $this->input->post('State'),
+                    'Link' => $this->input->post('Link'),
                 );
                 //if the insert has returned true then we show the flash message
                 if($this->manufacturers_model->update_manufacture($id, $data_to_store) == TRUE){
