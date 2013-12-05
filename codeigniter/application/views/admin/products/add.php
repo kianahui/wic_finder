@@ -3,13 +3,23 @@
       <ul class="breadcrumb">
         <li>
           <a href="<?php echo site_url("admin"); ?>">
-            <?php echo ucfirst($this->uri->segment(1));?>
+            if($this->uri->segment(2)=='products'){
+              <?php echo "Clinics");?>
+            }
+            else{
+              <?php echo "Food Lists");?>
+            }
           </a> 
           <span class="divider">/</span>
         </li>
         <li>
           <a href="<?php echo site_url("admin").'/'.$this->uri->segment(2); ?>">
-            <?php echo ucfirst($this->uri->segment(2));?>
+            <?php echo 
+            if($this->uri->segment(2)=='products'){"Clinics"}else{"Food Lists"}
+            else{
+              <?php echo "Food Lists");?>
+            }
+            );?>
           </a> 
           <span class="divider">/</span>
         </li>
