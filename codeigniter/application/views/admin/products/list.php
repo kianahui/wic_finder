@@ -16,7 +16,7 @@
         <h2>
           <?php
           if ($this->uri->segment(2)=='products'){echo "Clinics"}
-            \;?>
+            ;?>
           <a  href="<?php echo site_url("admin").'/'.$this->uri->segment(2); ?>/add" class="btn btn-success">Add a new</a>
         </h2>
       </div>
