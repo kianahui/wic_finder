@@ -71,55 +71,71 @@
               <input type="text" id="" name="Address1" value="<?php echo set_value('Address1'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
-          </div>  
+          </div>
+          <div>
              <div class="control-group">
             <label for="inputError" class="control-label">Address2</label>
             <div class="controls">
               <input type="text" id="" name="Address2" value="<?php echo set_value('Address2'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
+          </div>
+          <div>
             <div class="control-group">
             <label for="inputError" class="control-label">PO_Box</label>
             <div class="controls">
               <input type="text" id="" name="PO_Box" value="<?php echo set_value('PO_Box'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
+          </div>
+          <div>
             <div class="control-group">
             <label for="inputError" class="control-label">City</label>
             <div class="controls">
               <input type="text" id="" name="City" value="<?php echo set_value('City'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
+          </div>
+          <div>
             <div class="control-group">
             <label for="inputError" class="control-label">State</label>
             <div class="controls">
               <input type="text" id="" name="State" value="<?php echo set_value('State'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
+          </div>
+          <div>
             <div class="control-group">
             <label for="inputError" class="control-label">Zip Code</label>
             <div class="controls">
               <input type="text" id="" name="Zip_Code" value="<?php echo set_value('Zip_Code'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
+          </div>
+          <div>
             <div class="control-group">
             <label for="inputError" class="control-label">Phone Number</label>
             <div class="controls">
               <input type="text" id="" name="Phone" value="<?php echo set_value('Phone'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
+          </div>
+          <div>
             <div class="control-group">
             <label for="inputError" class="control-label">Latitude</label>
             <div class="controls">
               <input type="text" id="" name="Latitude" value="<?php echo set_value('Latitude'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
+          </div>
+          <div>
           <div class="control-group">
             <label for="inputError" class="control-label">Longitude</label>
             <div class="controls">
               <input type="text" id="" name="Longitude" value="<?php echo set_value('Longitude'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
+          </div>
           </div>
           </div>
           </div>
