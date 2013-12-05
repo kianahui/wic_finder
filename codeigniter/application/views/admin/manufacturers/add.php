@@ -53,9 +53,16 @@
       ?>
         <fieldset>
           <div class="control-group">
-            <label for="inputError" class="control-label">Name</label>
+            <label for="inputError" class="control-label">State</label>
             <div class="controls">
-              <input type="text" id="" name="name" value="<?php echo set_value('name'); ?>" >
+              <input type="text" id="" name="State" value="<?php echo set_value('State'); ?>" >
+              <!--<span class="help-inline">Woohoo!</span>-->
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="inputError" class="control-label">Link</label>
+            <div class="controls">
+              <input type="text" id="" name="Link" value="<?php echo set_value('Link'); ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
           </div>
