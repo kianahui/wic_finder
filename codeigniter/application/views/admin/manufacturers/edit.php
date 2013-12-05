@@ -54,16 +54,16 @@
       ?>
         <fieldset>
           <div class="control-group">
-            <label for="inputError" class="control-label">Description</label>
+            <label for="inputError" class="control-label">State</label>
             <div class="controls">
               <input type="text" id="" name="State" value="<?php echo $manufacture[0]['State']; ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
           </div>
           <div class="control-group">
-            <label for="inputError" class="control-label">Description</label>
+            <label for="inputError" class="control-label">Link</label>
             <div class="controls">
-              <input type="text" id="" name="List" value="<?php echo $manufacture[0]['List']; ?>" >
+              <input type="text" id="" name="Link" value="<?php echo $manufacture[0]['Link']; ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
             </div>
           </div>
