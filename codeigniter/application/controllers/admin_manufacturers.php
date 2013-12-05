@@ -163,8 +163,8 @@ class Admin_manufacturers extends CI_Controller {
         {
 
             //form validation
-            $this->form_validation->set_rules('name', 'State', 'required');
-            //$this->form_validation->set_rules('name', 'Link', 'required');
+            $this->form_validation->set_rules('State', 'State', 'required');
+            $this->form_validation->set_rules('Link', 'Link', 'required');
             $this->form_validation->set_error_delimiters('<div class="alert alert-error"><a class="close" data-dismiss="alert">×</a><strong>', '</strong></div>');
             
 
