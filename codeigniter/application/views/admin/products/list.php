@@ -8,7 +8,11 @@
           <span class="divider">/</span>
         </li>
         <li class="active">
-          <?php echo ucfirst($this->uri->segment(2));?>
+          <?php
+          if ($this->uri->segment(2) == 'products') {echo 'Clinics';}
+          else {echo "Food Lists";}
+            ?>
+
         </li>
       </ul>
 

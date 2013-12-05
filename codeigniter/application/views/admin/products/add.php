@@ -9,9 +9,10 @@
         </li>
         <li>
           <a href="<?php echo site_url("admin").'/'.$this->uri->segment(2); ?>">
-            <?php echo 
-            if($this->uri->segment(2)=='products'){"Clinics"}else{"Food Lists"}
-            );?>
+            <?php
+          if ($this->uri->segment(2) == 'products') {echo 'Clinics';}
+          else {echo "Food Lists";}
+            ?>
           </a> 
           <span class="divider">/</span>
         </li>
@@ -22,9 +23,10 @@
       
       <div class="page-header">
         <h2>
-          Adding <?php echo 
-            if($this->uri->segment(2)=='products'){"Clinics"}else{"Food Lists"}
-            );?>
+          Adding <?php
+          if ($this->uri->segment(2) == 'products') {echo 'Clinics';}
+          else {echo "Food Lists";}
+            ?>
         </h2>
       </div>
  

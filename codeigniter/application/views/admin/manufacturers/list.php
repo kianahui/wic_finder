@@ -8,13 +8,19 @@
           <span class="divider">/</span>
         </li>
         <li class="active">
-          <?php echo ucfirst($this->uri->segment(2));?>
+           <?php
+          if ($this->uri->segment(2) == 'products') {echo 'Clinics';}
+          else {echo "Food Lists";}
+            ?>
         </li>
       </ul>
 
       <div class="page-header users-header">
         <h2>
-          <?php echo ucfirst($this->uri->segment(2));?> 
+        <?php
+          if ($this->uri->segment(2) == 'products') {echo 'Clinics';}
+          else {echo "Food Lists";}
+            ?> 
           <a  href="<?php echo site_url("admin").'/'.$this->uri->segment(2); ?>/add" class="btn btn-success">Add a new</a>
         </h2>
       </div>
