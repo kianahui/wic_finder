@@ -15,8 +15,10 @@
       <div class="page-header users-header">
         <h2>
           <?php
-          if (1) {echo "Clinics";}
+          if ($this->uri->segment(2) == 'products') {echo "Clinics";}
+          else {echo "Food Lists";}
             ?>
+          }
           <a  href="<?php echo site_url("admin").'/'.$this->uri->segment(2); ?>/add" class="btn btn-success">Add a new</a>
         </h2>
       </div>
