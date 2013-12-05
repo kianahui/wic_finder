@@ -15,7 +15,7 @@
       <div class="page-header users-header">
         <h2>
           <?php
-          if ($this->uri->segment(2) == 'products') {echo "Clinics";}
+          if ($this->uri->segment(2) == 'products') {echo 'Clinics';}
           else {echo "Food Lists";}
             ?>
           }
