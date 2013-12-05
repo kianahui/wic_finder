@@ -123,7 +123,7 @@ class Manufacturers_model extends CI_Model {
     */
 	function delete_manufacture($id){
 		$this->db->where('id', $id);
-		$this->db->delete('foodList'); 
+		$this->db->delete('foodL'); 
 	}
  
 }
