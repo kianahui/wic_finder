@@ -89,6 +89,7 @@
             <div class="controls">
               <input type="text" id="" name="State" value="<?php echo $product[0]['State']; ?>" >
               <!--<span class="help-inline">Woohoo!</span>-->
+            </div>
             <div class="control-group">
             <label for="inputError" class="control-label">Zip Code</label>
             <div class="controls">
