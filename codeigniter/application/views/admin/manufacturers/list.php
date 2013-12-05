@@ -69,7 +69,8 @@
               {
                 echo '<tr>';
                 echo '<td>'.$row['id'].'</td>';
-                echo '<td>'.$row['name'].'</td>';
+                echo '<td>'.$row['State'].'</td>';
+                echo '<td>'.$row['Link'].'</td>';
                 echo '<td class="crud-actions">
                   <a href="'.site_url("admin").'/manufacturers/update/'.$row['id'].'" class="btn btn-info">view & edit</a>  
                   <a href="'.site_url("admin").'/manufacturers/delete/'.$row['id'].'" class="btn btn-danger">delete</a>
