@@ -358,11 +358,11 @@
           </div>
           <!--<div style="width: 1%; height: 500px; float: left;"></div> -->
           <div style="width:95%; height: 50%">
-            <div id='directions-area' style="float: right; width: 45%">
+            <div id='directions-area' style="float: none; width: 45%">
               <h1> Directions </h1>
               <div id='directions-panel'></div>
             </div>
-            <div id='closest-clinics-area' style="float: left; min-width: 300px; width:45%">
+            <div id='closest-clinics-area' style="float: none; min-width: 300px; width:45%">
               <h1> Nearest Clinics </h1>
               <div id="closest-clinics"></div>
             </div>
