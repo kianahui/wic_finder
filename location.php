@@ -36,6 +36,11 @@
         -o-box-shadow: none;
         box-shadow: none;
       }
+
+      @media all and (max-width: 500px) {
+        #directions-area {float: center; width: 90%}
+        #closest-clinics {float: center; width: 90%}
+      }
     </style>
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAp2uBqmOP1iUIzym9L4EEyOi01gOHGHpY&sensor=true"></script>
