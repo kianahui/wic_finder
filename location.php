@@ -269,14 +269,8 @@
 
       }
 
-      var now = new Date().valueOf();
-      setTimeout(function () {
-          if (new Date().valueOf() - now > 100) return;
-          window.location = "https://google.com";
-      }, 25);
-      window.location = "appname://";
 
-        google.maps.event.addDomListener(window, 'load', initMap);
+      google.maps.event.addDomListener(window, 'load', initMap);
       
     </script>
 </head>
