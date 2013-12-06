@@ -38,8 +38,8 @@
       }
 
       @media all and (max-width: 500px) {
-        #directions-area {float: center; width: 90%}
-        #closest-clinics {float: center; width: 90%}
+        #directions-area {float: none; width: 90%}
+        #closest-clinics {float: none; width: 90%}
       }
     </style>
 
